@@ -1,0 +1,8 @@
+License
+
+The entire code of this website is copyright of Wistarr. You shall not reuse it, unless you ask for 
+permission to use some snippets of code at someone from Wistarr.
+
+The Wistarr logo is copyright of Wistarr.
+
+Copyright (c) 2020 Wistarr
