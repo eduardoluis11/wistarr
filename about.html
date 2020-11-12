@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- My own custom CSS-->
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <!-- Bootstrap CSS. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <!-- Metas. -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Wistarr">
+    <meta name="description" content="A web development company">
+    <meta name="keywords" content="Web Development, Web Developers, Website, Web App, Company, Wistarr">
+
+    <!-- Meta to make the webpage's text responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- End of Metas. -->
+
+    <title>About Us</title>
+
+    <style>
+        /* This will add more space between the title and the text on tablet screens. */
+        @media screen and (max-width: 801px) and (min-width: 768px) {
+            .text-spacing {
+                padding-top: 4vh;
+            }
+        }
+    </style>
+</head>
+
+<!-- Navbar using the "Litera" theme from Bootswatch. -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Inside "navbar-brand", I need to put the Wistarr logo. -->
+    <a class="navbar-brand" href="index.html">
+
+        <!-- The Wistarr logo. The 145 px with is the best looking width for the logo. -->
+        <img src="./img/logo.png" width="145" alt="Wistarr Logo" class="d-inline-block align-middle mr-2">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <!-- This highlights in black the text in the navbar of the tab of the page that I'm currently in
+                 (in this case, I'm currently in "home"). -->
+                <a class="nav-link" href="index.html">Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About Us</a>
+                <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="privacy_n_legal.html">Privacy and Legal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>              <!-- End of navbar. -->
+
+
+<body>
+<!-- Grid system with 1 row and 2 columns. -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Column that contains the title "About Us" and the text. I will make it "lg" or "x-lg" so that the 1x2
+         grid only applies on large laptop screens. This way, the text will be above the picture on small tablet
+         screens, so that there will be less white space between the picture and the footer. -->
+        <div class="col-lg">
+            <br>
+            <h1>About Us</h1>
+
+            <br>
+            <!-- The "text-spacing" class will add more space between the title ("About Us") and the text. -->
+            <div class="text-spacing">
+                <p>
+                    In Wistarr, we develop websites, webpages, and simple
+                    apps.
+                </p>
+                <p>
+                    We are located at Las Palmas de Gran Canaria in the
+                    Canary Islands, Spain.
+                </p>
+            </div>
+            <br>
+        </div>
+
+        <!-- Column that contains an image. I changed it to "lg" to make the picture go below the text on tablet
+        screens. -->
+        <div class="col-lg">
+            <br>
+            <!-- Image. Photo by Clément H on Unsplash.
+            Link to photo: https://unsplash.com/photos/95YRwf6CNw8  -->
+            <!-- The "mx-auto" and "d-block" classes are Bootstrap classes that will center the image without
+             reducing its size. It works on tablet screens, and it looks good on browser and phone screens. -->
+            <img class="responsive mx-auto d-block" src="img/about_comprimido.jpg" height="300px" width="600px">
+        </div>
+    </div>      <!-- End of the row. -->
+</div>          <!-- End of the grid. -->
+
+    <!-- I inserted the footer within the body. -->
+    <footer class="container-fluid">
+        <!-- Website's footer. -->
+        <!-- I need to insert at least some text to make the footer to change color from the CSS code. -->
+        <!-- I need to make a 4x1 grid for the sitemap on the footer. -->
+        <div>
+            <!-- This div will act as a row and it will center the links of the sitemap. -->
+            <div class="row" style="text-align: center">
+                <div class="col-sm">
+                    <!-- The CSS code that makes the links remain white are on the CSS file. -->
+                    <a href="index.html"><p><b>Home</b></p></a>
+                    <a href="portfolio.html"><p><b>Portfolio</b></p></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><p><b>About us</b></p></a>
+                    <a href="privacy_n_legal.html"><p><b>Privacy and Legal</b></p></a>
+                </div>
+                <div class="col-sm">
+                    <a href="contact.html"><p><b>Contact Us</b></p></a>
+                </div>
+
+                <!-- Social media buttons. -->
+                <div class="col-sm">
+                    <p><b>Follow Us On Our Social Media:</b></p>
+                    <div class="icon-padding-2"> <!-- This will add horizontal padding to all of the social media icons. -->
+                        <!-- Social media icons. -->
+                        <!-- Icons made by Pixel perfect from www.flaticon.com -->
+                        <a href="https://www.instagram.com/wistarr_official/" target="_blank">
+                            <img src="img/instagram.png" width="20px" height="20px">
+                        </a>
+
+                        <a href="https://twitter.com/WistarrOfficial" target="_blank">
+                            <img src="img/twitter.png" width="20px" height="20px">
+                        </a>
+                        <a href="https://www.facebook.com/WistarrOfficial" target="_blank">
+                            <img src="img/facebook.png" width="20px" height="20px">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCJILUfxW5nKJDUCVaZIQquA" target="_blank">
+                            <img src="img/youtube_white.png" width="20px" height="20px">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>          <!-- End of 4x1 grid. -->
+
+        <!-- This will contain the copyright information in small text at the bottom of the footer. -->
+        <div id="copyright_1" class="text-center">
+            <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"
+                                target="_blank"><u>Pixel perfect</u></a> from <a href="https://www.flaticon.com/" title="Flaticon"
+                                                                                 target="_blank"><u> www.flaticon.com</u></a></p>
+            <p>&#169 Copyright 2020 Wistarr. All rights reserved.</p>
+        </div>              <!-- End of footer -->
+
+        <!-- Cookie consent banner text. Some of the code was taken
+        from https://github.com/Godsont/Cookie-Consent-Banner/blob/master/index.html -->
+        <div class="cookie-container">
+            <p>
+                We use cookies to collect some information about people who use our website. You can read how we use cookies
+                in our <a href="privacy_n_legal.html" target="_blank"><u>Privacy Policy and our Terms and Conditions</u>
+            </a>. Click "I Accept" if you give us your permission to use our cookies to collect your information.
+            </p>
+
+            <button class="cookie-btn">
+                I Accept
+            </button>
+        </div>                      <!-- End of cookie consent banner text. -->
+
+        <!-- Cookie consent banner JS code from the "js" folder. -->
+        <script src="./js/main.js"></script>
+
+        <!--  Boostrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </footer>
+</body>
+
+</html>
