@@ -22,11 +22,6 @@ body{
 }
 /* End of the code that removes the white space below the footer on tablets. */
 
-/*footer{*/
-/*    margin-top:auto;*/
-/*} */
-
-
 /* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
 /* I modified the CSS so that it only affects the Cookie consent banner, but the cookie consent banner's CSS is
  not being modified by this. It's being modified by Bootstrap. */
@@ -130,35 +125,6 @@ footer a:active {
     color: white;
 }
 
-/* This will make the footer to be 54vh high so that the entire text of the footer is readable and no white space
-is rendered below the footer. IT WORKS. */
-/*@media screen and (max-width: 575px) {*/
-/*    footer {*/
-/*        height: 54vh;*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
-/* This will remove the white space below the footer on screens between 576px and 655px. IT WORKS IN CHROME,
-but I'm still having issues in Firefox: Dev Edition. */
-/*@media screen and (max-width: 663px) and (min-width: 576px){*/
-/*    footer {*/
-/*        !* By making the height smaller, I can make the footer smaller so that I don't have any extra blue space.*!*/
-/*        height: 35vh;*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
-/* This will make the blue rectangle that contains the footer high enough on iPad and Kindle tablet screens so that
-no white space appears below it (between 768 px and 800 px). It doesn't work. */
-/*@media screen and (max-width: 800px) and (min-width: 768px){*/
-/*    footer {*/
-/*        margin-top: 0;*/
-/*        height: 200vh;*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
 
 /* This is a class that makes images responsive. */
 .responsive {
@@ -167,31 +133,6 @@ no white space appears below it (between 768 px and 800 px). It doesn't work. */
     max-width: 100%;
     height: auto;
 }
-
-/* This adds the "vh" and "vw" that I had originally put on "portfolio.html". This resizes the videos and makes
-them responsive. This size will apply for large screens. */
-/*@media screen and (min-width: 802px) {*/
-/*    iframe {*/
-/*        width: 50vw;*/
-/*        height: 60vh;*/
-
-/*    }*/
-/*}*/
-
-/* This modifies the iframes so that the videos are centered and occupy most of the width of the screen if the screen
-is small enough.
-
-I will edit this so that it accepts tablet screens as well (such as the Kindle tablet, which has a width of 800 px.)
-IT'S NOT WORKING.*/
-/*@media screen and (max-width: 800px) {*/
-/*    iframe {*/
-/*        width: 100%;*/
-/*        height:60vh;*/
-
-/*        !*margin-left: 100px;*!*/
-/*    }*/
-/*}*/
-
 
 /* This class centers elements (like the portfolio's videos) on screens that are at least 576 px wide.
 For some reason, it's working now.*/
@@ -255,11 +196,6 @@ Source: https://blog.hubspot.com/website/remove-underline-from-links-css */
     }
 }
 
-/* This will add padding at the bottom of the social media icons in Contact Us so that they don't touch anything
-below them. */
-/*.icon-padding-3 a {*/
-/*    padding-bottom: 10px;*/
-/*}*/
 
 /* This adds a horizontal padding to the social media icons on the footer. */
 @media screen and (min-width: 433px) {
@@ -277,31 +213,4 @@ below them. */
         width: 50%;
     }
 }
-
-
-
-/* These 2 classes will adjust the size of the iframe windows so that they adjust to every screen size.
-Source: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp*/
-/*.iframe_container {*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    width: 100%;*/
-/*    padding-top: 56.25%; !* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) *!*/
-/*}*/
-
-/*.responsive-iframe {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-/* End of the the 2 classes that make the iframes responsive. */
-
-/* This class will center the links in the footer's sitemap. This doesn't work.  */
-/*.center_3 {*/
-/*    text-align: center;*/
-/*}*/
 
