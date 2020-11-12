@@ -1,0 +1,307 @@
+/* This removes the white space below the footer on tablet screens.
+Source: https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b
+from the user "vsync" (link to their profile: https://stackoverflow.com/users/104380/vsync).
+*/
+
+body{ height:100vh; margin:0; }
+
+/* This controls the size of the footer on smaller screens. If I make this bigger, there will be less white space
+on small screens. By using "media screen", and leaving a footer height of 54vh for screens up to 575px, all problems are
+solved in Firefox: Dev Edition (including all of the screen sizes for all devices) and in Chrome. There is no excessive
+blue space in the footer, and no white space below the footer. */
+@media screen and (max-width: 575px) {
+    footer {
+        min-height: 54vh;
+    }
+}
+
+/* This will make the footer sticky. */
+body{
+    display:flex;
+    flex-direction:column;
+}
+/* End of the code that removes the white space below the footer on tablets. */
+
+/*footer{*/
+/*    margin-top:auto;*/
+/*} */
+
+
+/* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
+/* I modified the CSS so that it only affects the Cookie consent banner, but the cookie consent banner's CSS is
+ not being modified by this. It's being modified by Bootstrap. */
+.cookie-container body {
+    font-family: "Arial", sans-serif;
+}
+
+.cookie-container p {
+    margin: 24px 0;
+    line-height: 2;
+}
+
+.wrapper {
+    padding: 32px;
+}
+
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: #f5f6fa;
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+
+    transition: 400ms;
+}
+
+.cookie-container.active {
+    bottom: 0;
+}
+
+.cookie-container a {
+    color: #f5f6fa;
+}
+
+
+.cookie-btn {
+    background: #e84118;
+    border: 0;
+    color: #f5f6fa;
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* End of CSS of the cookie consent banner. */
+
+/* This modifies the CSS of the footer. */
+footer {
+    margin-top:auto;    /* This is the last line of code to use Flexbox to remove the white space below the footer. */
+
+    /* I MAY NEED TO UNCOMMENT THIS IF THERE'S STILL WHITE SPACE BELOW THE FOOTER. */
+    /*margin-top: 80px;*/
+
+    /* THIS WAS THE SOLUTION. This made the entire bottom of the page to be blue, and no white space was left below
+    the footer.
+
+    If I leave this at 54 vh, there won't be any white space below the footer, and all of the white text will
+    be read. HOWEVER, I will have way too much blue empty space if I have a large screen (like a laptop screen). */
+    /*height: 30vh;*/
+	
+	/* The color of the footer will be blueish. */
+    background-color: #1642F2;
+    color: white;
+
+}
+
+/* This makes the links on the footer's sitemap to remain white and prevents them from becoming blue when clicking
+or hovering the mouse over the links. */
+footer a:link {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:active {
+    text-decoration: none;
+    color: white;
+}       /* End of the CSS that makes the footer sitemap links to remain white. */
+
+/* End of the code that modifies de color of the links in the footer's sitemap. */
+
+/* This modifies the CSS of the copyright information in the footer. */
+#copyright_1 {
+    font-size: 12px;
+}
+/* This turns the links at the bottom of the footer from blue to white. */
+#copyright_1 a {
+    color: white;
+}
+
+/* This will make the footer to be 54vh high so that the entire text of the footer is readable and no white space
+is rendered below the footer. IT WORKS. */
+/*@media screen and (max-width: 575px) {*/
+/*    footer {*/
+/*        height: 54vh;*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+/* This will remove the white space below the footer on screens between 576px and 655px. IT WORKS IN CHROME,
+but I'm still having issues in Firefox: Dev Edition. */
+/*@media screen and (max-width: 663px) and (min-width: 576px){*/
+/*    footer {*/
+/*        !* By making the height smaller, I can make the footer smaller so that I don't have any extra blue space.*!*/
+/*        height: 35vh;*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+/* This will make the blue rectangle that contains the footer high enough on iPad and Kindle tablet screens so that
+no white space appears below it (between 768 px and 800 px). It doesn't work. */
+/*@media screen and (max-width: 800px) and (min-width: 768px){*/
+/*    footer {*/
+/*        margin-top: 0;*/
+/*        height: 200vh;*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+
+/* This is a class that makes images responsive. */
+.responsive {
+    /* This will make the image to become smaller if it has to, but it will never be wider than its original width.
+    IT WORKED. */
+    max-width: 100%;
+    height: auto;
+}
+
+/* This adds the "vh" and "vw" that I had originally put on "portfolio.html". This resizes the videos and makes
+them responsive. This size will apply for large screens. */
+/*@media screen and (min-width: 802px) {*/
+/*    iframe {*/
+/*        width: 50vw;*/
+/*        height: 60vh;*/
+
+/*    }*/
+/*}*/
+
+/* This modifies the iframes so that the videos are centered and occupy most of the width of the screen if the screen
+is small enough.
+
+I will edit this so that it accepts tablet screens as well (such as the Kindle tablet, which has a width of 800 px.)
+IT'S NOT WORKING.*/
+/*@media screen and (max-width: 800px) {*/
+/*    iframe {*/
+/*        width: 100%;*/
+/*        height:60vh;*/
+
+/*        !*margin-left: 100px;*!*/
+/*    }*/
+/*}*/
+
+
+/* This class centers elements (like the portfolio's videos) on screens that are at least 576 px wide.
+For some reason, it's working now.*/
+@media screen and (min-width: 576px) {
+    .center_1 {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+/* This will turn the link to the "privacy and legal" in the cookie consent banner into yellow if you hover the mouse
+over it. It only works with "background color" (to highlight it). */
+.cookie-container a:hover {
+    background-color: yellow;
+}
+
+/* Blue lines above the 3 titles for the "contact us" page. */
+.blue-line {
+    background-color: #1642F2;
+    height: 5px;
+    width: 270px;
+    margin: auto;
+}
+
+ /* This class will center the text and icons, regardless of screen size. */
+.center_2 {
+    text-align: center;
+    margin: auto;
+
+    /* If I leave it at 53%, "phone number" appears in a single line. At 50%, "phone number" appears in 2 lines. */
+    width: 53%;
+}
+
+/* This will remove the underlines from the social media icons in "contact us".
+Source: https://blog.hubspot.com/website/remove-underline-from-links-css */
+.no-underline a:link {
+    text-decoration: none;
+}
+
+.no-underline a:visited {
+    text-decoration: none;
+}
+
+.no-underline a:hover {
+    text-decoration: none;
+}
+
+.no-underline a:active {
+    text-decoration: none;
+}       /* End of the CSS that removes the underlines from the social media icons. */
+
+/* This class adds horizontal padding to the "Contact Us" social media icons so that there's more space between them.
+ The screen needs to be at least 433 px wide for this to take effect. */
+@media screen and (min-width: 433px) {
+    .icon-padding a {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        /* I will add some padding to the bottom so that the icons don't touch anything below them. IT'S NOT WORKING.*/
+        /*padding-bottom: 10px;*/
+    }
+}
+
+/* This will add padding at the bottom of the social media icons in Contact Us so that they don't touch anything
+below them. */
+/*.icon-padding-3 a {*/
+/*    padding-bottom: 10px;*/
+/*}*/
+
+/* This adds a horizontal padding to the social media icons on the footer. */
+@media screen and (min-width: 433px) {
+    .icon-padding-2 a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* This will align the iframes to the center of the screen on large screen sizes. I need to add this clas to the
+ div that contains the iframes, not to the iframe tags themselves. IT WORKED. */
+@media screen and (min-width: 802px) {
+    .center_3 {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+
+
+/* These 2 classes will adjust the size of the iframe windows so that they adjust to every screen size.
+Source: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp*/
+/*.iframe_container {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    width: 100%;*/
+/*    padding-top: 56.25%; !* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) *!*/
+/*}*/
+
+/*.responsive-iframe {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+/* End of the the 2 classes that make the iframes responsive. */
+
+/* This class will center the links in the footer's sitemap. This doesn't work.  */
+/*.center_3 {*/
+/*    text-align: center;*/
+/*}*/
+
