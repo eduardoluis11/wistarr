@@ -238,3 +238,9 @@ I needed to put the "img" tag instead of "a" for me to be able to add padding bo
     }
 }
 
+/* This will add some padding to the bottom of the "Follow us on our Social Media" headline so that the Youtube icon
+has enough clear space at the top of the icon to follow YouTube's guidelines so that we could use their icon. */
+.social-media-headline {
+    padding-bottom: 25px;
+}
+
