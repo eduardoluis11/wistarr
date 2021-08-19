@@ -187,13 +187,21 @@ Source: https://blog.hubspot.com/website/remove-underline-from-links-css */
 
 /* This class adds horizontal padding to the "Contact Us" social media icons so that there's more space between them.
  The screen needs to be at least 433 px wide for this to take effect. */
-@media screen and (min-width: 433px) {
+@media screen and (min-width: 360px) {
     .icon-padding a {
         padding-left: 10px;
         padding-right: 10px;
 
         /* I will add some padding to the bottom so that the icons don't touch anything below them. IT'S NOT WORKING.*/
         /*padding-bottom: 10px;*/
+    }
+}
+
+/* This will add the vertical paddings to the social media icons in the Contact Us pages so that there's enough
+clear space so that we could use the Youtube icon by following Youtube's guidelines. */
+@media screen and (min-width: 360px) {
+    .icon-padding img {
+        margin-bottom: 30px;
     }
 }
 
