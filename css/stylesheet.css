@@ -211,6 +211,16 @@ for a better explanation). */
     }
 }
 
+/* This will add top padding to the social media icons on iPad screens so that the Youtube icon has enough clearspace to follow 
+Youtube's guidelines for us to use their icon.
+
+I needed to put the "img" tag instead of "a" for me to be able to add padding bottom so that*/
+@media screen and (min-width: 768px) {
+    .icon-padding-2 img {
+        margin-bottom: 30px;
+    }
+}
+
 /* This will add enough horizontal space for the youtube icon in really small mobile screens.*/
 @media screen and (min-width: 360px) {
     .icon-padding-2 a {
