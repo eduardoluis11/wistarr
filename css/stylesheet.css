@@ -119,6 +119,7 @@ footer a:active {
 /* This modifies the CSS of the copyright information in the footer. */
 #copyright_1 {
     font-size: 12px;
+    padding-top: 20px;
 }
 /* This turns the links at the bottom of the footer from blue to white. */
 #copyright_1 a {
@@ -197,11 +198,24 @@ Source: https://blog.hubspot.com/website/remove-underline-from-links-css */
 }
 
 
-/* This adds a horizontal padding to the social media icons on the footer. */
+/* This adds a horizontal padding to the social media icons on the footer.
+
+The Youtube icon (according to Youtube's guidelines) should have enough padding so that there's enough space
+so that there's nothing around the icon in a space equivalent to the size triangle inside of the icon
+(see https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors 
+for a better explanation). */
 @media screen and (min-width: 433px) {
     .icon-padding-2 a {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* This will add enough horizontal space for the youtube icon in really small mobile screens.*/
+@media screen and (min-width: 360px) {
+    .icon-padding-2 a {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 

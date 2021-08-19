@@ -9,5 +9,16 @@ Link to photo: https://unsplash.com/photos/95YRwf6CNw8
 on Unsplash (https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
 Link to photo: https://unsplash.com/photos/KE0nC8-58MQ
 
-3) Social media icons: Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> 
-from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+3) Social media icons: 
+
+3.1) Facebook:
+https://en.facebookbrand.com/facebookapp/assets/f-logo/
+
+3.2) Instagram:
+https://en.facebookbrand.com/instagram/assets/instagram?audience=instagram-landing
+
+3.3) Twitter: 
+https://about.twitter.com/en/who-we-are/brand-toolkit
+
+3.4) YouTube:
+https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
