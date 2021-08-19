@@ -119,7 +119,7 @@ footer a:active {
 /* This modifies the CSS of the copyright information in the footer. */
 #copyright_1 {
     font-size: 12px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 /* This turns the links at the bottom of the footer from blue to white. */
 #copyright_1 a {
@@ -242,5 +242,11 @@ I needed to put the "img" tag instead of "a" for me to be able to add padding bo
 has enough clear space at the top of the icon to follow YouTube's guidelines so that we could use their icon. */
 .social-media-headline {
     padding-bottom: 25px;
+}
+
+/* This will guarantee me that the copyright line will always have a blue background (which is giving us problems in 
+iPhone 6 screens.)*/
+.copyright-line {
+    background-color: #1642F2;
 }
 
