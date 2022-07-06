@@ -12,6 +12,10 @@ another type of cookie.
 I ended up removing the Google Analytics code from here since it wil only execute the 1st time the user clicks on "I accept".
 That's bad since I will only be able to track user information if the user eneters the 1st time on the home page, but not whenever 
 he visits another page withing my site. 
+
+I re-added the Google Analytics code here since it won't run the exact same moment the user clicks on "I accept". Instead, Google Analytics
+will only start taking data from the user after the user either refreshes the page, or enters into another page. So, if the enter the home
+page and click on "I accept", Google Analytics wouldn't normally detect that.
 */
 cookieButton.addEventListener("click", () => {
 
@@ -21,12 +25,15 @@ cookieButton.addEventListener("click", () => {
     // This adds a cookie
     localStorage.setItem("cookieBannerDisplayed", "true");
 
-    // Tag from Google Analytics (cookie), which takes info from the sers who enter the site
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments);}
-    // gtag('js', new Date());
+    // Tag from Google Analytics (cookie), which takes info from the users who enter the site
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
   
-    // gtag('config', 'G-2YRG54NPH3');
+    gtag('config', 'G-2YRG54NPH3');
+
+    // DEBUG msg
+    console.log("Google Analytics is taking your data.")
 });
 
 setTimeout(() => {
@@ -41,6 +48,9 @@ This will always execute if the user has the cookieBannerDisplayed cookie. That 
 previously clicked on "I accept" on the cookie consent banner.
 */
 if (localStorage.getItem("cookieBannerDisplayed")) {
+
+    // DEBUG msg
+    console.log("Google Analytics is taking your data.")
     
     // Tag from Google Analytics (cookie), which takes info from the sers who enter the site
     window.dataLayer = window.dataLayer || [];
@@ -48,4 +58,9 @@ if (localStorage.getItem("cookieBannerDisplayed")) {
     gtag('js', new Date());
   
     gtag('config', 'G-2YRG54NPH3');
+
+// This else will only display a DEBUG msg if the user doesn't click on "I accept"
+} else {
+    // DEBUG msg
+    console.log("You didn't accept our cookies. So, Google Analytics isn't working.")
 }
