@@ -113,8 +113,9 @@
             <!-- <br> -->
             <br>
 			
+            <!-- I will add an ID to every iFrame so that I can add the links to the videos via JS code after accepting the cookie banner -->
 			<div class="iframe_container center_3">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UJHt2U5h5fs" title="YouTube video player" 
+                <iframe id="portfolio_video_1" width="560" height="315" title="YouTube video player" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
                 </iframe>
@@ -144,12 +145,12 @@
             <!-- It works now by using the "iframe_container" and the "responsive-iframe" classes. I had to
             insert the CSS code within the "style" tags on the "head" of this webpage.
              The "center_3" class centers the videos on large screen sizes. -->
-            <div class="iframe_container center_3">
+            <div  class="iframe_container center_3">
                 <!-- I used "vw" and "vh" tags to make the video responsive, and moved them to the stylesheet.css
                 file.
             
                 I also added lazy loading to ALL iframes so that the portfolio page loads faster. -->
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2ff_mKe0rmg" loading="lazy" title="YouTube video player" 
+                <iframe id="portfolio_video_2" width="560" height="315" loading="lazy" title="YouTube video player" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
                 </iframe>
@@ -163,7 +164,7 @@
             <br>
             <br>
 
-			<!-- <a href="https://wistarr-list-app.herokuapp.com/">Link to Wistarr List's website</a> -->
+
             <br>
             <br>
 
@@ -174,7 +175,7 @@
 
             <!-- Starr's video. -->
             <div class="iframe_container center_3">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6bNyVyBNnqs" loading="lazy" title="YouTube video player" 
+                <iframe id="portfolio_video_3" width="560" height="315" loading="lazy" title="YouTube video player" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
                 </iframe>
