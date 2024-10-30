@@ -69,17 +69,27 @@ if (localStorage.getItem("cookieBannerDisplayed")) {
     // This inserts the link of the 1st video into the iFrame of the 1st portfolio video
     video_1.setAttribute("src", "https://www.youtube-nocookie.com/embed/UJHt2U5h5fs");
 
-    // This selects the 2nd iFrame tag of my portfolio page
-    video_2 = document.getElementById("portfolio_video_2")
+    // // This selects the 2nd iFrame tag of my portfolio page
+    // video_2 = document.getElementById("portfolio_video_2")
+    //
+    // // This inserts the link of the 1st video into the iFrame of the 2nd portfolio video
+    // video_2.setAttribute("src", "https://www.youtube-nocookie.com/embed/2ff_mKe0rmg");
+    //
+    // // This selects the 3rd iFrame tag of my portfolio page
+    // video_3 = document.getElementById("portfolio_video_3")
+    //
+    // // This inserts the link of the 1st video into the iFrame of the 3rd portfolio video
+    // video_3.setAttribute("src", "https://www.youtube-nocookie.com/embed/6bNyVyBNnqs")
 
-    // This inserts the link of the 1st video into the iFrame of the 2nd portfolio video
-    video_2.setAttribute("src", "https://www.youtube-nocookie.com/embed/2ff_mKe0rmg");
+    // This selects the Wagtail Web app iFrame tag of my portfolio page
+    video_4 = document.getElementById("portfolio_video_4")
 
-    // This selects the 3rd iFrame tag of my portfolio page
-    video_3 = document.getElementById("portfolio_video_3")
+    // This selects the Wagtail web app iFrame tag
+    video_4 = document.getElementById("portfolio_video_4")
 
-    // This inserts the link of the 1st video into the iFrame of the 3rd portfolio video
-    video_3.setAttribute("src", "https://www.youtube-nocookie.com/embed/6bNyVyBNnqs")
+    // This inserts the link of the Wagtail web app into the iFrame of the Wagtail web app
+    video_4.setAttribute("src", "https://www.youtube-nocookie.com/embed/rYVvCBnYsQs");
+
 
 // This else will only display a DEBUG msg if the user doesn't click on "I accept"
 } else {
