@@ -103,6 +103,10 @@ if (localStorage.getItem("cookieBannerDisplayed")) {
     keith_video = document.getElementById("portfolio_keith_video")
     keith_video.setAttribute("src", "https://www.youtube-nocookie.com/embed/RkH7mJGHUlE")
 
+    // This will get the div where I'll store Police Tests' video, and insert the video into the div
+    police_tests_video = document.getElementById("police_tests_video")
+    police_tests_video.setAttribute("src", "https://www.youtube-nocookie.com/embed/lfv2mXHcS08?si=x-tpWevuH7An2Nn3")
+
 
 
 // This else will only display a DEBUG msg if the user doesn't click on "I accept"
