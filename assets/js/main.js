@@ -14,14 +14,18 @@
     }
 
     // === logo change
-    /* This will load the logo on the navbar once the user starts scrolling down the page.
+    /* This will load Wistarr's logo on the navbar once the user starts scrolling down the page.
 
-    I will load Wistarr's Logo.
+    This will first load the black logo once the user starts scrolling down the page. Since the navbar will change to
+    white, I will change the logo to black.
+
+    Afterwards, if the user scrolls back to the top, I will make the navbar once again transparent. So, I will have to
+    load the white logo again.
     *  */
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "img/logo.png";
+      logo.src = "img/logo.png";  // This loads the black logo
     } else {
-      logo.src = "img/logo.png";
+      logo.src = "img/white-company-logo.png";  // This loads the white logo
     }
 
     // show or hide the back-top-top button
