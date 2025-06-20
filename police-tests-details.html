@@ -140,59 +140,62 @@
 
         <!--        <div class="p-3 m-0 border-0 bd-example m-0 border-0">-->
 
-        <!-- Bootstrap Grid that shows the video with the Demo of the portfolio project.
+<!--        &lt;!&ndash; Bootstrap Grid that shows the video with the Demo of the portfolio project.-->
 
-        I will make a 1x3 Medium Bootstrap grid, in which I will put the iframe in the middle. The
-        left and right column will have empty space.
-         -->
+<!--        I will make a 1x3 Medium Bootstrap grid, in which I will put the iframe in the middle. The-->
+<!--        left and right column will have empty space.-->
+<!--         &ndash;&gt;-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-2"></div> &lt;!&ndash; Left column: It only has empty space &ndash;&gt;-->
+
+<!--          &lt;!&ndash; Middle Column: this contains the iframe. &ndash;&gt;-->
+<!--          <div class="col-md-8">-->
+
+<!--             &lt;!&ndash; I will use Bootstrap 5's "ratio" and "ratio-16x9" classes to adjust the width of the video so-->
+<!--             that it takes the full width of my browser's screen, minus the "container" padding and margins.-->
+
+<!--             Source: Sébastien Gicquel from Stack Overflow in-->
+<!--             https://stackoverflow.com/questions/71453855/bootstrap-5-how-to-make-video-size-responsive-->
+<!--             &ndash;&gt;-->
+<!--            <div class="ratio ratio-16x9">-->
+<!--              &lt;!&ndash;              <div>&ndash;&gt;-->
+<!--              &lt;!&ndash; Test iframe which will always play the video, even if the user didn't accept my cookies.-->
+<!--              DELETE LATER.-->
+
+<!--              Use some values for the width and the height like:-->
+<!--                width="1300"-->
+<!--                height="700"-->
+<!--              &ndash;&gt;-->
+<!--              <iframe-->
+<!--                src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"-->
+<!--                title="YouTube video player"-->
+<!--                frameborder="0"-->
+<!--                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+<!--                referrerpolicy="strict-origin-when-cross-origin"-->
+<!--                allowfullscreen-->
+<!--                width="560"-->
+<!--                height="315"-->
+<!--              >-->
+<!--              </iframe>-->
+
+<!--              &lt;!&ndash; <iframe width="560" height="315" src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> &ndash;&gt;-->
+<!--            </div>-->
+
+<!--          </div>  &lt;!&ndash; End of the middle column &ndash;&gt;-->
+
+<!--          <div class="col-md-2"></div> &lt;!&ndash; Right column: It only has empty space &ndash;&gt;-->
+<!--        </div>  &lt;!&ndash; End of the 1x3 Medium Bootstrap Grid containing the iframe. &ndash;&gt;-->
+
         <div class="row">
-          <div class="col-md-2"></div> <!-- Left column: It only has empty space -->
-
-          <!-- Middle Column: this contains the iframe. -->
-          <div class="col-md-8">
-             <!-- I will use Bootstrap 5's "ratio" and "ratio-16x9" classes to adjust the width of the video so
-             that it takes the full width of my browser's screen, minus the "container" padding and margins.
-
-             Source: Sébastien Gicquel from Stack Overflow in
-             https://stackoverflow.com/questions/71453855/bootstrap-5-how-to-make-video-size-responsive
-             -->
-            <div class="ratio ratio-16x9">
-              <!--              <div>-->
-              <!-- Test iframe which will always play the video, even if the user didn't accept my cookies.
-              ELIMINATE LATER.
-
-              Use some values for the width and the height like:
-                width="1300"
-                height="700"
-              -->
-              <iframe
-                src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                width="560"
-                height="315"
-              >
-              </iframe>
-
-              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-            </div>
-
-          </div>  <!-- End of the middle column -->
-
-          <div class="col-md-2"></div> <!-- Right column: It only has empty space -->
-        </div>  <!-- End of the 1x3 Medium Bootstrap Grid containing the iframe. -->
-
-        <div class="row">
 
 
 
-          <!-- Container that will include the YouTube iframe with the web app's demo -->
+          <!-- Container that includes an image with a mask on the bottom part of the image.
+
+          Container that could include the YouTube iframe with the web app's demo.
+
+          -->
           <div class="col-lg-12">
-
-
 
             <div class="ud-blog-details-image">
 
@@ -203,10 +206,15 @@
 <!--              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
 <!--              allowfullscreen>-->
 <!--              </iframe>-->
-              <!--              <img-->
+
+              <!-- Image in the top part of the page -->
+              <img
+                src="img/portfolio/police-tests-logo-high-resolution-tiny-png.png"
+                alt="blog details"
+              />
               <!--                src="assets/images/blog/blog-details-01.jpg"-->
               <!--                alt="blog details"-->
-              <!--              />-->
+              <!--                            />-->
 
 
               <!-- End of the YouTube iframe -->
@@ -237,9 +245,45 @@
 
           <div class="col-lg-8">
             <div class="ud-blog-details-content">
+
+              <!-- Title of the Portfolio Project -->
               <h2 class="ud-blog-details-title">
-                Facing a challenge is kind of a turn-on for an easy rider
+                Police Tests
+                <!--                Facing a challenge is kind of a turn-on for an easy rider-->
               </h2>
+             <!-- Iframe with the video showing a demo of the web app. -->
+                           <!-- I will use Bootstrap 5's "ratio" and "ratio-16x9" classes to adjust the width of the video so
+             that it takes the full width of my browser's screen, minus the "container" padding and margins.
+
+             Source: Sébastien Gicquel from Stack Overflow in
+             https://stackoverflow.com/questions/71453855/bootstrap-5-how-to-make-video-size-responsive
+             -->
+            <div class="ratio ratio-16x9">
+              <!--              <div>-->
+              <!-- Test iframe which will always play the video, even if the user didn't accept my cookies.
+              DELETE LATER.
+
+              Use some values for the width and the height like:
+                width="1300"
+                height="700"
+              -->
+              <iframe
+                src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                width="560"
+                height="315"
+              >
+              </iframe>
+
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            </div>
+
+
+              <!-- Description of the web app -->
               <p class="ud-blog-details-para">
                 There’s a time and place for everything… including asking for
                 reviews. For instance: you should not asking for a review on
@@ -343,16 +387,26 @@
                   alt="shape"
                   class="shape shape-2"
                 />
-                <h3 class="ud-newsletter-title">Join our newsletter!</h3>
-                <p>Enter your email to receive our latest newsletter.</p>
+
+                <!-- Title of the blue container that contains the links to the web app and to the repo.
+                -->
+                <h3 class="ud-newsletter-title">See it in action</h3>
+                <p>
+                  If you want to try the web app, or if you want to look at its source code, click on the links below.
+                  <!--                  Enter your email to receive our latest newsletter.-->
+                </p>
                 <form class="ud-newsletter-form">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email address"
-                  />
-                  <button class="ud-main-btn">Subscribe Now</button>
-                  <p class="ud-newsletter-note">Don't worry, we don't spam</p>
+                  <!--                  <input-->
+                  <!--                    type="email"-->
+                  <!--                    name="email"-->
+                  <!--                    placeholder="Your Email address"-->
+                  <!--                  />-->
+                  <!-- Button with a link to the URL where the web app is deployed -->
+                  <button class="ud-main-btn">Link to Web App</button>
+
+                  <!-- Button with the link to the GitHub Repo  -->
+                  <button class="ud-main-btn">Link to Repo</button>
+                  <!--                  <p class="ud-newsletter-note">Don't worry, we don't spam</p>-->
                 </form>
               </div>
 
