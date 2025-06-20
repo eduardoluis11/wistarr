@@ -1,6 +1,6 @@
 <!-- =========
 
-	Police Tests' Detailed View
+	Police Tests' Detailed View.
 
 	I will show a YouTube video with the Demo, and put the links to the repo and to the URL to the hosting server
 	where the web app is deployed.
@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/lineicons.css" />
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
+
+    <!-- === Custom CSS ====== -->
+
   </head>
   <body>
     <!-- ====== Header Start ====== -->
@@ -123,7 +126,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="ud-banner-content">
-              <h1>Blog Page</h1>
+              <h1>Police Tests - Detailed View</h1>
             </div>
           </div>
         </div>
@@ -131,16 +134,82 @@
     </section>
     <!-- ====== Banner End ====== -->
 
-    <!-- ====== Blog Details Start ====== -->
+    <!-- ====== Portfolio Details Start ====== -->
     <section class="ud-blog-details">
       <div class="container">
+
+        <!--        <div class="p-3 m-0 border-0 bd-example m-0 border-0">-->
+
+        <!-- Bootstrap Grid that shows the video with the Demo of the portfolio project.
+
+        I will make a 1x3 Medium Bootstrap grid, in which I will put the iframe in the middle. The
+        left and right column will have empty space.
+         -->
         <div class="row">
+          <div class="col-md-2"></div> <!-- Left column: It only has empty space -->
+
+          <!-- Middle Column: this contains the iframe. -->
+          <div class="col-md-8">
+             <!-- I will use Bootstrap 5's "ratio" and "ratio-16x9" classes to adjust the width of the video so
+             that it takes the full width of my browser's screen, minus the "container" padding and margins.
+
+             Source: Sébastien Gicquel from Stack Overflow in
+             https://stackoverflow.com/questions/71453855/bootstrap-5-how-to-make-video-size-responsive
+             -->
+            <div class="ratio ratio-16x9">
+              <!--              <div>-->
+              <!-- Test iframe which will always play the video, even if the user didn't accept my cookies.
+              ELIMINATE LATER.
+
+              Use some values for the width and the height like:
+                width="1300"
+                height="700"
+              -->
+              <iframe
+                src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                width="560"
+                height="315"
+              >
+              </iframe>
+
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            </div>
+
+          </div>  <!-- End of the middle column -->
+
+          <div class="col-md-2"></div> <!-- Right column: It only has empty space -->
+        </div>  <!-- End of the 1x3 Medium Bootstrap Grid containing the iframe. -->
+
+        <div class="row">
+
+
+
+          <!-- Container that will include the YouTube iframe with the web app's demo -->
           <div class="col-lg-12">
+
+
+
             <div class="ud-blog-details-image">
-              <img
-                src="assets/images/blog/blog-details-01.jpg"
-                alt="blog details"
-              />
+
+
+
+              <!-- YouTube iframe with the video showcasing a demo of the web app. ACTIVATE LATER. -->
+<!--              <iframe id="police_tests_video" width="560" height="315" title="YouTube video player"-->
+<!--              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+<!--              allowfullscreen>-->
+<!--              </iframe>-->
+              <!--              <img-->
+              <!--                src="assets/images/blog/blog-details-01.jpg"-->
+              <!--                alt="blog details"-->
+              <!--              />-->
+
+
+              <!-- End of the YouTube iframe -->
               <div class="ud-blog-overlay">
                 <div class="ud-blog-overlay-content">
                   <div class="ud-blog-author">
@@ -691,6 +760,10 @@
     <!-- ====== Back To Top End ====== -->
 
     <!-- ====== All Javascript Files ====== -->
+    <!-- JS code from my custom "js" folder. This will get the "src" attribute with the URL of the video for the iframe.
+    -->
+    <script src="./js/main.js"></script>
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>

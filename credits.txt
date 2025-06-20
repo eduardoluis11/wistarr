@@ -33,4 +33,6 @@ You can always support this project by [Starring🌟 This Repository](https://gi
 and sharing with friends. Also open an issue if you find bug or feel free to contribute by pull requests after fixing any issue or adding more values.
 
 
-2)
+2) Sébastien Gicquel from Stack Overflow. I learned how to use the "ratio" class from Bootstrap 5.
+
+https://stackoverflow.com/questions/71453855/bootstrap-5-how-to-make-video-size-responsive
