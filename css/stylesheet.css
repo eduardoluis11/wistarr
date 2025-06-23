@@ -22,7 +22,7 @@ body{
 }
 /* End of the code that removes the white space below the footer on tablets. */
 
-/* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
+/* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/blob/master/style.css */
 /* I modified the CSS so that it only affects the Cookie consent banner, but the cookie consent banner's CSS is
  not being modified by this. It's being modified by Bootstrap. */
 .cookie-container body {
@@ -38,6 +38,10 @@ body{
     padding: 32px;
 }
 
+/* Styles for the cookie consent banner from Godson Thomas.
+
+I will modify its z-index so that it appears above every other element on the page.
+*/
 .cookie-container {
     position: fixed;
     bottom: -100%;
@@ -49,6 +53,10 @@ body{
     box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
 
     transition: 400ms;
+
+    z-index: 9999; /* This will make the cookie consent banner to appear above every other element on the page. */
+
+
 }
 
 .cookie-container.active {

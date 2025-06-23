@@ -12,6 +12,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Wistarr">
+    <meta name="description" content="A web development company">
+    <meta name="keywords" content="Web Development, Web Developers, Website, Web App, Company, Wistarr">
+
+    <!-- This will make the website searchable in Google (by using the Google Search Console). -->
+	<meta name="google-site-verification" content="AaQTtLv_GWE6YXV5WReOwOsTUaPQsongekTm-Gdl6YM" />
+
+    <!-- Global site tag (gtag.custom_js) - Google Analytics.
+
+    This will only work if users click on "I accept" on the cookie consent banner.-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YRG54NPH3"></script>
+
+
     <title>Polices Tests | Detailed View</title>
 
     <!--====== Favicon Icon ======-->
@@ -28,6 +42,8 @@
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
 
     <!-- === Custom CSS ====== -->
+    <!-- My own custom CSS-->
+    <link rel="stylesheet" href="./css/stylesheet.css">
 
   </head>
   <body>
@@ -262,13 +278,17 @@
               <div class="ratio ratio-16x9">
                 <!--              <div>-->
                 <!-- Test iframe which will always play the video, even if the user didn't accept my cookies.
-                DELETE LATER.
+                MODIFY LATER.
 
-                Use some values for the width and the height like:
-                  width="1300"
-                  height="700"
+                I added an ID to the iframe so that my JavaScript code can detect it and prevent the video from
+                loading until the user accepts my cookies. This is to make the website GDPR compliant. Well,
+                I need to remove the "src" attribute from the iframe, since, until the user acceptos mu cookies,
+                the iframe won't load any video. Now, if the user accepts my cookies, JavaScript will insert
+                the video link into the "src" attribute.
+
+                Link to the video: src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"
                 -->
-                <iframe
+                <iframe id="police_tests_video"
                   src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"
                   title="YouTube video player"
                   frameborder="0"
@@ -843,6 +863,20 @@
       <i class="lni lni-chevron-up"> </i>
     </a>
     <!-- ====== Back To Top End ====== -->
+
+    <!-- Cookie consent banner text. Some of the code was taken
+    from https://github.com/Godsont/Cookie-Consent-Banner/blob/master/index.html -->
+    <div class="cookie-container">
+        <p>
+            We use cookies to collect some information about people who use our website. You can read how we use cookies
+            in our <a href="privacy_n_legal.html" target="_blank"><u>Privacy Policy and our Terms and Conditions</u>
+        </a>. Click "I Accept" if you give us your permission to use our cookies to collect your information.
+        </p>
+
+        <button class="cookie-btn">
+            I Accept
+        </button>
+    </div>                      <!-- End of cookie consent banner text. -->
 
     <!-- ====== All Javascript Files ====== -->
     <!-- JS code from my custom "custom_js" folder. This will get the "src" attribute with the URL of the video for the iframe.
