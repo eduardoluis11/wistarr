@@ -28,7 +28,7 @@ cookieButton.addEventListener("click", () => {
     // Tag from Google Analytics (cookie), which takes info from the users who enter the site
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    gtag('custom_js', new Date());
   
     gtag('config', 'G-2YRG54NPH3');
 
@@ -59,7 +59,7 @@ if (localStorage.getItem("cookieBannerDisplayed")) {
     // Tag from Google Analytics (cookie), which takes info from the users who enter the site
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    gtag('custom_js', new Date());
   
     gtag('config', 'G-2YRG54NPH3');
 
