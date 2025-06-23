@@ -286,9 +286,11 @@
                 the iframe won't load any video. Now, if the user accepts my cookies, JavaScript will insert
                 the video link into the "src" attribute.
 
+                To help my switch / case in JavaScript find the iframe, I added a class called "iframe-container".
+
                 Link to the video: src="https://www.youtube.com/embed/lfv2mXHcS08?si=QqtAn9tTQVJgpo9r"
                 -->
-                <iframe id="police_tests_video"
+                <iframe id="police_tests_video" class="iframe-container"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -878,9 +880,17 @@
     </div>                      <!-- End of cookie consent banner text. -->
 
     <!-- ====== All Javascript Files ====== -->
-    <!-- JS code from my custom "custom_js" folder. This will get the "src" attribute with the URL of the video for the iframe.
+    <!-- JS scripts from my custom "custom_js" folder.
+
+    This will activate my cookie consent banner.
+
+    This will get the "src" attribute with the URL of the video for the iframe.
+
+    Additionally, it will activate Google Analytics if the user accepts my cookies.
     -->
-    <script src="custom_js/main.js"></script>
+    <script src="custom_js/google_analytics_tag_manager.js"></script>
+    <script src="custom_js/show_video_if_user_accepted_cookies.js"></script>
+    <!--    <script src="custom_js/main.js"></script>-->
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
