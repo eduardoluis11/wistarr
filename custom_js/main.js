@@ -16,6 +16,8 @@ he visits another page withing my site.
 I re-added the Google Analytics code here since it won't run the exact same moment the user clicks on "I accept". Instead, Google Analytics
 will only start taking data from the user after the user either refreshes the page, or enters into another page. So, if the enter the home
 page and click on "I accept", Google Analytics wouldn't normally detect that.
+
+Now, modify this JS function so that, at the end of this function, the entire page reloads. That is, that after the entirety of this function finishes executing, the web browser on the client side will refresh.
 */
 cookieButton.addEventListener("click", () => {
 
@@ -32,15 +34,21 @@ cookieButton.addEventListener("click", () => {
   
     gtag('config', 'G-2YRG54NPH3');
 
-    // DEBUG msg
-    console.log("Google Analytics is taking your data.")
+    // Reload the page after everything else has executed
+    window.location.reload();
+
+    // // DEBUG msg
+    // console.log("Google Analytics is taking your data.")
 });
 
+
+/* This shows the cookie consent banner after the user waits for 2 seconds after entering into the page. */
 setTimeout(() => {
     if (!localStorage.getItem("cookieBannerDisplayed")) {
         cookieContainer.classList.add("active");
     }
-}, 2000);       /* End of the cookie consent banner JS code. */
+}, 2000);
+/* End of the cookie consent banner JS code. */
 
 /* Tag from Google Analytics.
 
