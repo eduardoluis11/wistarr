@@ -66,7 +66,7 @@
   // ===== wow js
   new WOW().init();
 
-  // ====== scroll top js
+  // ====== scroll top custom_js
   function scrollTo(element, to = 0, duration = 500) {
     const start = element.scrollTop;
     const change = to - start;
