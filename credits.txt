@@ -38,3 +38,6 @@ and sharing with friends. Also open an issue if you find bug or feel free to con
 https://stackoverflow.com/questions/71453855/bootstrap-5-how-to-make-video-size-responsive
 
 3) Ideogram. I generated some of the logos in this web app by using Ideogram's AI. Link: https://ideogram.ai/
+
+4) Godson Thomas. I part of the code from his cookie consent banner. Link to his repo with the cookie consent banner:
+https://github.com/Godsont/Cookie-Consent-Banner
