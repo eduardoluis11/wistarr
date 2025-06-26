@@ -1,198 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <!-- Global site tag (gtag.custom_js) - Google Analytics.
-    
-    This will only work if users click on "I accept" on the cookie consent banner.-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YRG54NPH3"></script>
-
-    <!-- My own custom CSS-->
-    <link rel="stylesheet" href="./css/stylesheet.css">
-    <!-- Bootstrap CSS. -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-
-    <!-- Metas. -->
-    <meta charset="UTF-8">
     <meta name="author" content="Wistarr">
     <meta name="description" content="A web development company">
     <meta name="keywords" content="Web Development, Web Developers, Website, Web App, Company, Wistarr">
 
-    <!-- Meta to make the webpage's text responsive. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- End of Metas. -->
+    <!-- This will make the website searchable in Google (by using the Google Search Console). -->
+	<meta name="google-site-verification" content="AaQTtLv_GWE6YXV5WReOwOsTUaPQsongekTm-Gdl6YM" />
 
-    <title>About Us</title>
+    <!-- Global site tag (gtag.custom_js) - Google Analytics.
 
-    <style>
-        /* This will add more space between the title and the text on tablet screens. */
-        @media screen and (max-width: 801px) and (min-width: 768px) {
-            .text-spacing {
-                padding-top: 4vh;
-            }
-        }
-    </style>
-</head>
+    This will only work if users click on "I accept" on the cookie consent banner.-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YRG54NPH3"></script>
 
-<!-- Navbar using the "Litera" theme from Bootswatch. -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Inside "navbar-brand", I need to put the Wistarr logo. -->
-    <a class="navbar-brand" href="index.html">
+    <title>Play | Open source Project by UIdeck</title>
 
-        <!-- The Wistarr logo. The 145 px with is the best looking width for the logo. -->
-        <img src="./img/logo.png" width="145" alt="Wistarr Logo" class="d-inline-block align-middle mr-2">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/svg"
+    />
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <!-- This highlights in black the text in the navbar of the tab of the page that I'm currently in
-                 (in this case, I'm currently in "home"). -->
-                <a class="nav-link" href="index.html">Home
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/ud-styles.css" />
+
+    <!-- === Custom CSS ====== -->
+    <!-- My own custom CSS
+
+    -->
+    <link rel="stylesheet" href="./custom_css/cookie-consent-banner-styles.css">
+  </head>
+  <body>
+    <!-- ====== Header Start ======
+
+    The link to the portfolio gallery overview will be a link to a new page. As such, I don't want to scroll the user
+    down the page when they click on the "Portfolio" link. So, I will remove the "ud menu scroll" class from that link.
+
+    Inside "navbar-brand", I need to put the white Wistarr logo. This will load the logo while the navbar is
+    transparent.
+    -->
+    <header class="ud-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg">
+
+              <!-- Navbar's Logo.
+
+              Inside "navbar-brand", I need to put the white Wistarr logo.
+
+              This will load the logo while the navbar is transparent.
+              -->
+              <a class="navbar-brand" href="index.html">
+                <img src="./img/white-company-logo.png" alt="Logo" />
+              </a>
+              <button class="navbar-toggler">
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+              </button>
+
+              <div class="navbar-collapse">
+                <ul id="nav" class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="index.html">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="about.html">About</a>
+                  </li>
+                  <!--                  <li class="nav-item">-->
+                  <!--                    <a class="ud-menu-scroll" href="#pricing">Pricing</a>-->
+                  <!--                  </li>-->
+                  <!--                  <li class="nav-item">-->
+                  <!--                    <a class="ud-menu-scroll" href="#team">Team</a>-->
+                  <!--                  </li>-->
+
+                  <li class="nav-item"> <!-- Link to the "Contact" page (it's within the home page) -->
+                    <a class="ud-menu-scroll" href="contact.html">Contact</a>
+                  </li>
+
+                  <li class="nav-item"> <!-- Link to the Portfolio Gallery with all of our portfolio projects -->
+                    <a href="portfolio.html">
+                      Portfolio
+                    </a>
+                  </li>
+
+                  <!--                  <li class="nav-item nav-item-has-children">-->
+                  <!--                    <a href="javascript:void(0)"> Pages </a>-->
+                  <!--                    <ul class="ud-submenu">-->
+                  <!--                      <li class="ud-submenu-item">-->
+                  <!--                        <a href="about.html" class="ud-submenu-link">-->
+                  <!--                          About Page-->
+                  <!--                        </a>-->
+                  <!--                      </li>-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="templates/play-bootstrap-main/pricing.html" class="ud-submenu-link">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                          Pricing Page&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        </a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                      <li class="ud-submenu-item">-->
+                  <!--                        <a href="templates/play-bootstrap-main/contact.html" class="ud-submenu-link">-->
+                  <!--                          Contact Page-->
+                  <!--                        </a>-->
+                  <!--                      </li>-->
+                  <!--                      <li class="ud-submenu-item">-->
+                  <!--                        <a href="blog.html" class="ud-submenu-link">-->
+                  <!--                          Blog Grid Page-->
+                  <!--                        </a>-->
+                  <!--                      </li>-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="blog-details.html" class="ud-submenu-link">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                          Blog Details Page&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        </a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="templates/play-bootstrap-main/login.html" class="ud-submenu-link">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                          Sign In Page&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        </a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="templates/play-bootstrap-main/404.html" class="ud-submenu-link">404 Page</a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                    </ul>-->
+                  <!--                  </li>-->
+
+                </ul>
+              </div>
+
+              <!--              <div class="navbar-btn d-none d-sm-inline-block">-->
+              <!--                <a href="templates/play-bootstrap-main/login.html" class="ud-main-btn ud-login-btn">-->
+              <!--                  Sign In-->
+              <!--                </a>-->
+              <!--                <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">-->
+              <!--                  Sign Up-->
+              <!--                </a>-->
+              <!--              </div>-->
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ====== Header End ====== -->
+
+    <!-- ====== Banner Start ====== -->
+    <section class="ud-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-banner-content">
+              <h1>About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Banner End ====== -->
+
+    <!-- ====== About Start ====== -->
+    <section id="about" class="ud-about">
+      <div class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content">
+              <span class="tag">About Us</span>
+              <h2>Web development company located in the Canary Islands.</h2>
+              <p>
+                In Wistarr, we develop websites, webpages, and simple apps.
+              </p>
+
+              <p>
+                Wistarr was founded by Eduardo Salinas, a web developer.
+              </p>
+
+              <p>
+                We are located at Las Palmas de Gran Canaria in the
+                Canary Islands, Spain.
+              </p>
+
+            </div>
+          </div>
+          <div class="ud-about-image">
+            <img src="assets/images/about/about-image.svg" alt="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== About End ====== -->
+
+<!--    &lt;!&ndash; ====== Team Start ====== &ndash;&gt;-->
+<!--    <section id="team" class="ud-team">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-lg-12">-->
+<!--            <div class="ud-section-title mx-auto text-center">-->
+<!--              <span>Our Team</span>-->
+<!--              <h2>Meet The Team</h2>-->
+<!--              <p>-->
+<!--                There are many variations of passages of Lorem Ipsum available-->
+<!--                but the majority have suffered alteration in some form.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="row">-->
+<!--          <div class="col-xl-3 col-lg-3 col-sm-6">-->
+<!--            <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">-->
+<!--              <div class="ud-team-image-wrapper">-->
+<!--                <div class="ud-team-image">-->
+<!--                  <img src="assets/images/team/team-01.png" alt="team" />-->
+<!--                </div>-->
+
+<!--                <img-->
+<!--                  src="assets/images/team/dotted-shape.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-1"-->
+<!--                />-->
+<!--                <img-->
+<!--                  src="assets/images/team/shape-2.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-2"-->
+<!--                />-->
+<!--              </div>-->
+<!--              <div class="ud-team-info">-->
+<!--                <h5>Adveen Desuza</h5>-->
+<!--                <h6>UI Designer</h6>-->
+<!--              </div>-->
+<!--              <ul class="ud-team-socials">-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-facebook-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-twitter-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-instagram-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-xl-3 col-lg-3 col-sm-6">-->
+<!--            <div class="ud-single-team wow fadeInUp" data-wow-delay=".15s">-->
+<!--              <div class="ud-team-image-wrapper">-->
+<!--                <div class="ud-team-image">-->
+<!--                  <img src="assets/images/team/team-02.png" alt="team" />-->
+<!--                </div>-->
+
+<!--                <img-->
+<!--                  src="assets/images/team/dotted-shape.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-1"-->
+<!--                />-->
+<!--                <img-->
+<!--                  src="assets/images/team/shape-2.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-2"-->
+<!--                />-->
+<!--              </div>-->
+<!--              <div class="ud-team-info">-->
+<!--                <h5>Jezmin uniya</h5>-->
+<!--                <h6>Product Designer</h6>-->
+<!--              </div>-->
+<!--              <ul class="ud-team-socials">-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-facebook-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-twitter-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-instagram-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-xl-3 col-lg-3 col-sm-6">-->
+<!--            <div class="ud-single-team wow fadeInUp" data-wow-delay=".2s">-->
+<!--              <div class="ud-team-image-wrapper">-->
+<!--                <div class="ud-team-image">-->
+<!--                  <img src="assets/images/team/team-03.png" alt="team" />-->
+<!--                </div>-->
+
+<!--                <img-->
+<!--                  src="assets/images/team/dotted-shape.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-1"-->
+<!--                />-->
+<!--                <img-->
+<!--                  src="assets/images/team/shape-2.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-2"-->
+<!--                />-->
+<!--              </div>-->
+<!--              <div class="ud-team-info">-->
+<!--                <h5>Andrieo Gloree</h5>-->
+<!--                <h6>App Developer</h6>-->
+<!--              </div>-->
+<!--              <ul class="ud-team-socials">-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-facebook-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-twitter-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-instagram-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-xl-3 col-lg-3 col-sm-6">-->
+<!--            <div class="ud-single-team wow fadeInUp" data-wow-delay=".25s">-->
+<!--              <div class="ud-team-image-wrapper">-->
+<!--                <div class="ud-team-image">-->
+<!--                  <img src="assets/images/team/team-04.png" alt="team" />-->
+<!--                </div>-->
+
+<!--                <img-->
+<!--                  src="assets/images/team/dotted-shape.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-1"-->
+<!--                />-->
+<!--                <img-->
+<!--                  src="assets/images/team/shape-2.svg"-->
+<!--                  alt="shape"-->
+<!--                  class="shape shape-2"-->
+<!--                />-->
+<!--              </div>-->
+<!--              <div class="ud-team-info">-->
+<!--                <h5>Jackie Sanders</h5>-->
+<!--                <h6>Content Writer</h6>-->
+<!--              </div>-->
+<!--              <ul class="ud-team-socials">-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-facebook-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-twitter-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="https://twitter.com/MusharofChy">-->
+<!--                    <i class="lni lni-instagram-filled"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; ====== Team End ====== &ndash;&gt;-->
+
+    <!-- ====== Footer Start ====== -->
+    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+      <div class="shape shape-1">
+        <img src="assets/images/footer/shape-1.svg" alt="shape" />
+      </div>
+      <div class="shape shape-2">
+        <img src="assets/images/footer/shape-2.svg" alt="shape" />
+      </div>
+      <div class="shape shape-3">
+        <img src="assets/images/footer/shape-3.svg" alt="shape" />
+      </div>
+      <div class="ud-footer-widgets"> <!-- Footer -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="ud-widget">
+
+                <!-- This will load the white version of the logo on the footer -->
+                <a href="index.html" class="ud-footer-logo">
+                  <img src="img/white-company-logo.png" alt="logo" />
                 </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">About Us</a>
-                <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="privacy_n_legal.html">Privacy and Legal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>              <!-- End of navbar. -->
-
-
-<body>
-<!-- Grid system with 1 row and 2 columns. -->
-<div class="container-fluid">
-    <div class="row">
-        <!-- Column that contains the title "About Us" and the text. I will make it "lg" or "x-lg" so that the 1x2
-         grid only applies on large laptop screens. This way, the text will be above the picture on small tablet
-         screens, so that there will be less white space between the picture and the footer. -->
-        <div class="col-lg">
-            <br>
-            <h1>About Us</h1>
-
-            <br>
-            <!-- The "text-spacing" class will add more space between the title ("About Us") and the text. -->
-            <div class="text-spacing">
-                <p>
-                    In Wistarr, we develop websites, webpages, and simple
-                    apps.
+                <p class="ud-widget-desc">  <!-- Slogan -->
+                  We achieve things.
+                  We do them well.
+                  Wistarr has you covered.
+                  <!--                  We create digital experiences for brands and companies by-->
+                  <!--                  using technology.-->
                 </p>
-                <p>
-                    We are located at Las Palmas de Gran Canaria in the
-                    Canary Islands, Spain.
-                </p>
+                <ul class="ud-widget-socials">
+                  <li>  <!-- Link to Wistarr's Facebook page -->
+                    <a href="https://www.facebook.com/WistarrOfficial" rel="nofollow noopner" target="_blank">
+                      <i class="lni lni-facebook-filled"></i>
+                    </a>
+                  </li>
+                  <!--                  <li>-->
+                  <!--                    <a href="https://twitter.com/MusharofChy">-->
+                  <!--                      <i class="lni lni-twitter-filled"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="https://twitter.com/MusharofChy">-->
+                  <!--                      <i class="lni lni-instagram-filled"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="https://twitter.com/MusharofChy">-->
+                  <!--                      <i class="lni lni-linkedin-original"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                </ul>
+              </div>
             </div>
-            <br>
-        </div>
 
-        <!-- Column that contains an image. I changed it to "lg" to make the picture go below the text on tablet
-        screens. -->
-        <div class="col-lg">
-            <br>
-            <!-- Image. Photo by Clément H on Unsplash.
-            Link to photo: https://unsplash.com/photos/95YRwf6CNw8  -->
-            <!-- The "mx-auto" and "d-block" classes are Bootstrap classes that will center the image without
-             reducing its size. It works on tablet screens, and it looks good on browser and phone screens. -->
-            <img class="responsive mx-auto d-block" alt="Laptop showing a text editor with a lot of code written on it." src="img/about_comprimido.jpg" height="300px" width="600px">
-        </div>
-    </div>      <!-- End of the row. -->
-</div>          <!-- End of the grid. -->
-
-    <!-- I inserted the footer within the body. -->
-    <footer class="container-fluid">
-        <!-- Website's footer. -->
-        <!-- I need to insert at least some text to make the footer to change color from the CSS code. -->
-        <!-- I need to make a 4x1 grid for the sitemap on the footer. -->
-        <div>
-            <!-- This div will act as a row and it will center the links of the sitemap. -->
-            <div class="row" style="text-align: center">
-                <div class="col-sm">
-                    <!-- The CSS code that makes the links remain white are on the CSS file. -->
-                    <a href="index.html"><p><b>Home</b></p></a>
-                    <a href="portfolio.html"><p><b>Portfolio</b></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="#"><p><b>About us</b></p></a>
-                    <a href="privacy_n_legal.html"><p><b>Privacy and Legal</b></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="contact.html"><p><b>Contact Us</b></p></a>
-                </div>
-
-                <!-- Social media buttons. -->
-                <div class="col-sm">
-                    <p class="social-media-headline"><b>Follow Us On Our Social Media:</b></p>
-                    <div class="icon-padding-2"> <!-- This will add horizontal padding to all of the social media icons. -->
-                        <!-- Social media icons. -->
-                        <!-- Icons made by Pixel perfect from www.flaticon.com -->
-                        <!-- I will deactivate the Instagram and the Twitter accounts for the time being. -->
-
-<!--                        <a href="https://www.instagram.com/wistarr_official/" target="_blank">-->
-<!--                            <img src="img/instagram2.png" alt="Instagram icon." width="32px" height="32px">-->
-<!--                        </a>-->
-
-<!--                        <a href="https://twitter.com/WistarrOfficial" target="_blank">-->
-<!--                            <img src="img/twitter2.png" alt="Twitter icon." width="32px" height="32px">-->
-<!--                        </a>-->
-                        <a href="https://www.facebook.com/WistarrOfficial" target="_blank">
-                            <img src="img/facebook2.png" alt="Facebook icon." width="32px" height="32px">
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCJILUfxW5nKJDUCVaZIQquA" target="_blank">
-                            <img src="img/youtube2.png" alt="YouTube icon." width="32px" height="32px">
-                        </a>
-                    </div>
-
-                </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">About Us</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <!--                  <li>-->
+                  <!--                    <a href="javascript:void(0)">Features</a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="javascript:void(0)">About</a>-->
+                  <!--                  </li>-->
+                  <li>
+                    <a href="privacy_n_legal.html">Privacy policy</a>
+                  </li>
+                  <li>
+                    <a href="privacy_n_legal.html">Terms of service</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </div>          <!-- End of 4x1 grid. -->
+          </div>
+        </div>
+      </div>
+      <div class="ud-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <ul class="ud-footer-bottom-left">
+                <li>
+                  <a href="privacy_n_legal.html">Privacy policy</a>
+                </li>
+                <!--                <li>-->
+                <!--                  <a href="javascript:void(0)">Support policy</a>-->
+                <!--                </li>-->
+                <li>
+                  <a href="privacy_n_legal.html">Terms of service</a>
+                </li>
+                <li>
 
-        <!-- This will contain the copyright information in small text at the bottom of the footer. -->
-        <div id="copyright_1" class="text-center">
-            <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+
+              <!-- Flaticon's Copyright information for the icons -->
+              <p class="ud-footer-bottom-right">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"
                 target="_blank"><u>Pixel perfect</u></a> from <a href="https://www.flaticon.com/" title="Flaticon"
-                target="_blank"><u> www.flaticon.com</u></a></p>
-            
-            <!-- This JS script will automatically update the year once a new year comes in (i.e: if it's 2021, it will update
-                to 2021.) 
-                Source: https://kerstinmartin.com/blog/copyright-notice -->
-            <p class="copyright-line">&#169 Copyright <script>document.write(new Date().getFullYear())</script> Wistarr. All rights reserved.</p>
-        </div>              <!-- End of footer -->
-
-        <!-- Cookie consent banner text. Some of the code was taken
-        from https://github.com/Godsont/Cookie-Consent-Banner/blob/master/index.html -->
-        <div class="cookie-container">
-            <p>
-                We use cookies to collect some information about people who use our website. You can read how we use cookies
-                in our <a href="privacy_n_legal.html" target="_blank"><u>Privacy Policy and our Terms and Conditions</u>
-            </a>. Click "I Accept" if you give us your permission to use our cookies to collect your information.
-            </p>
-
-            <button class="cookie-btn">
-                I Accept
-            </button>
-        </div>                      <!-- End of cookie consent banner text. -->
-
-        <!-- JS code from the "custom_js" folder. -->
-        <script src="custom_js/main.js"></script>
-
-        <!--  Boostrap JS. -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+                target="_blank"><u> www.flaticon.com</u></a>
+              </p>
+              <p class="ud-footer-bottom-right">
+                <!-- Copyright information and current year. -->
+                &#169 Copyright <script>document.write(new Date().getFullYear())</script> Wistarr. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+    <!-- ====== Footer End ====== -->
 
+    <!-- ====== Back To Top Start ====== -->
+    <a href="javascript:void(0)" class="back-to-top">
+      <i class="lni lni-chevron-up"> </i>
+    </a>
+    <!-- ====== Back To Top End ====== -->
+
+    <!-- Cookie consent banner text. Some of the code was taken
+    from https://github.com/Godsont/Cookie-Consent-Banner/blob/master/index.html -->
+    <div class="cookie-container">
+        <p>
+            We use cookies to collect some information about people who use our website. You can read how we use cookies
+            in our <a href="privacy_n_legal.html" target="_blank"><u>Privacy Policy and our Terms and Conditions</u>
+        </a>. Click "I Accept" if you give us your permission to use our cookies to collect your information.
+        </p>
+
+        <button class="cookie-btn">
+            I Accept
+        </button>
+    </div>                      <!-- End of cookie consent banner text. -->
+
+    <!-- ====== All Javascript Files ====== -->
+    <!-- JS scripts from my custom "custom_js" folder.
+
+    This will activate my cookie consent banner.
+
+    This will get the "src" attribute with the URL of the video for the iframe.
+
+    Additionally, it will activate Google Analytics if the user accepts my cookies.
+    -->
+    <script src="custom_js/google_analytics_tag_manager.js"></script>
+    <script src="custom_js/show_video_if_user_accepted_cookies.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

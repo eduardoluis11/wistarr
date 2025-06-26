@@ -1,460 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
 
-<head>
-    <!-- Global site tag (gtag.custom_js) - Google Analytics.
-    
-    This will only work if users click on "I accept" on the cookie consent banner.-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YRG54NPH3"></script>
+    <!-- Portfolio Gallery page. Here's a list of all the projects that I've done for my portfolio.
 
-    <!-- My own custom CSS-->
-    <link rel="stylesheet" href="./css/stylesheet.css">
-    <!-- Bootstrap CSS. -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+     To see more details about each project, such as a video or the links to the actual project, you need to click
+     on the project´s name or the thumbnail image.
+     -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Overview | Wistarr</title>
 
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/svg"
+    />
 
-    <!-- Metas. -->
-    <meta charset="UTF-8">
-    <meta name="author" content="Wistarr">
-    <meta name="description" content="A web development company">
-    <meta name="keywords" content="Web Development, Web Developers, Website, Web App, Company, Wistarr">
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/ud-styles.css" />
+  </head>
+  <body>
+    <!-- ====== Header Start ======
 
-    <!-- Meta to make the webpage's text responsive. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- End of Metas. -->
+    The link to the portfolio gallery overview will be a link to a new page. As such, I don't want to scroll the user
+    down the page when they click on the "Portfolio" link. So, I will remove the "ud menu scroll" class from that link.
 
-    <title>Portfolio</title>
+    Inside "navbar-brand", I need to put the white Wistarr logo. This will load the logo while the navbar is
+    transparent.
+    -->
+        <header class="ud-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
 
-    <style>
-        /* These 2 classes will adjust the size of the iframe windows so that they adjust to every phone
-         and tablet screen size below 800 px of width.
-         Source: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp */
-        @media screen and (max-width: 801px) {
-            .iframe_container {
-                position: relative;
-                overflow: hidden;
-                width: 100%;
-                padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-            }
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg">
 
-            .responsive-iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }   /* End of the the 2 classes that make the iframes responsive. */
+              <!-- Navbar's Logo.
 
-        /* This adds the "vh" and "vw" to the iframes. This resizes the videos and makes
-        them responsive on large laptop screens. */
-        @media screen and (min-width: 802px) {
-            iframe {
-                width: 50vw;
-                height: 60vh;
-            }
-        }
-    </style>
-</head>
+              Inside "navbar-brand", I need to put the white Wistarr logo.
 
-<!-- Navbar using the "Litera" theme from Bootswatch. -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Inside "navbar-brand", I need to put the Wistarr logo. -->
-    <a class="navbar-brand" href="index.html">
+              This will load the logo while the navbar is transparent.
+              -->
+              <a class="navbar-brand" href="index.html">
+                <img src="./img/white-company-logo.png" alt="Logo" />
+              </a>
+              <button class="navbar-toggler">
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+              </button>
 
-        <!-- The Wistarr logo. The 145 px with is the best looking width for the logo. -->
-        <img src="./img/logo.png" width="145" alt="Wistarr Logo" class="d-inline-block align-middle mr-2">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+              <div class="navbar-collapse">
+                <ul id="nav" class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="index.html">Home</a>
+                  </li>
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <!-- This highlights in black the text in the navbar of the tab of the page that I'm currently in
-                 (in this case, I'm currently in "home"). -->
-                <a class="nav-link" href="index.html">Home
-                </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Portfolio</a>
-                <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="privacy_n_legal.html">Privacy and Legal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>              <!-- End of navbar. -->
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="about.html">About</a>
+                  </li>
+                  <!--                  <li class="nav-item">-->
+                  <!--                    <a class="ud-menu-scroll" href="#pricing">Pricing</a>-->
+                  <!--                  </li>-->
+                  <!--                  <li class="nav-item">-->
+                  <!--                    <a class="ud-menu-scroll" href="#team">Team</a>-->
+                  <!--                  </li>-->
 
+                  <li class="nav-item"> <!-- Link to the "Contact" page (it's within the home page) -->
+                    <a class="ud-menu-scroll" href="contact.html">Contact</a>
+                  </li>
 
-<body>
-    <div class="container-fluid">
-        <div>
-            <br>
-            <h1>Our Portfolio</h1>
+                  <li class="nav-item"> <!-- Link to the Portfolio Gallery with all of our portfolio projects -->
+                    <a href="portfolio.html">
+                      Portfolio
+                    </a>
+                  </li>
 
-            <br>
-            <p>Here are some examples of our work.</p>
-            <br>
+                  <!--                  <li class="nav-item nav-item-has-children">-->
+                  <!--                    <a href="javascript:void(0)"> Pages </a>-->
+                  <!--                    <ul class="ud-submenu">-->
+                  <!--                      <li class="ud-submenu-item">-->
+                  <!--                        <a href="about.html" class="ud-submenu-link">-->
+                  <!--                          About Page-->
+                  <!--                        </a>-->
+                  <!--                      </li>-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="templates/play-bootstrap-main/pricing.html" class="ud-submenu-link">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                          Pricing Page&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        </a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                      <li class="ud-submenu-item">-->
+                  <!--                        <a href="templates/play-bootstrap-main/contact.html" class="ud-submenu-link">-->
+                  <!--                          Contact Page-->
+                  <!--                        </a>-->
+                  <!--                      </li>-->
+                  <!--                      <li class="ud-submenu-item">-->
+                  <!--                        <a href="blog.html" class="ud-submenu-link">-->
+                  <!--                          Blog Grid Page-->
+                  <!--                        </a>-->
+                  <!--                      </li>-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="blog-details.html" class="ud-submenu-link">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                          Blog Details Page&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        </a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="templates/play-bootstrap-main/login.html" class="ud-submenu-link">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                          Sign In Page&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        </a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      <li class="ud-submenu-item">&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                        <a href="templates/play-bootstrap-main/404.html" class="ud-submenu-link">404 Page</a>&ndash;&gt;-->
+                  <!--                      &lt;!&ndash;                      </li>&ndash;&gt;-->
+                  <!--                    </ul>-->
+                  <!--                  </li>-->
+
+                </ul>
+              </div>
+
+              <!--              <div class="navbar-btn d-none d-sm-inline-block">-->
+              <!--                <a href="templates/play-bootstrap-main/login.html" class="ud-main-btn ud-login-btn">-->
+              <!--                  Sign In-->
+              <!--                </a>-->
+              <!--                <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">-->
+              <!--                  Sign Up-->
+              <!--                </a>-->
+              <!--              </div>-->
+            </nav>
+
+          </div>
         </div>
-
-        <div>
-
-            <div>   <!-- Police Entrance Exams -->
-                <h2>Police Tests:</h2>
-                <br>
-
-                <!-- I will add an ID to every iFrame so that I can add the links to the videos via JS code after
-                accepting the cookie banner
-                -->
-                <!--                <iframe width="560" height="315" src="https://www.youtube.com/embed/rYVvCBnYsQs?si=G2TMXEIB9J5sLMgz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-
-                <!--                                <iframe width="560" height="315"-->
-                <!--                                        src="https://www.youtube-nocookie.com/embed/rYVvCBnYsQs?si=G2TMXEIB9J5sLMgz&amp;controls=0"-->
-                <!--                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;-->
-                <!--                                        encrypted-media; gyroscope; picture-in-picture; web-share"-->
-                <!--                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>-->
-
-                <!--                                </iframe>-->
-
-                <!-- Link to the YouTube Video with the Demo -->
-                <div class="iframe_container center_3">
-                    <iframe id="police_tests_video" width="560" height="315" title="YouTube video player"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                    </iframe>
-                </div>
-
-                <br>
-
-                <!-- Link to the Web App -->
-                <a href="https://eduardopythonportfolio10.eu.pythonanywhere.com/">Link to Web App</a>
-                <br>
-                <br>
-
-                <!-- Link to the repo -->
-                <a href="https://github.com/eduardoluis11/police-academy-exams-english">Link to the repo</a>
-                <br>
-                <br>
-                <!-- Description -->
-                <p>
-                    A web app that allows you to take practice tests to prepare you for police entrance exams.
-                </p>
-
-            </div>      <!-- End of Police Tests' web app. -->
-
-            <!--            <div>   &lt;!&ndash; Gym's Back-end made in Django &ndash;&gt;-->
-            <!--                <h2>Gym's Back-end made in Django:</h2>-->
-            <!--                &lt;!&ndash; <br> &ndash;&gt;-->
-            <!--                <br>-->
-            <!--                    &lt;!&ndash; I need to create a YouTube video for Reca Tahssil. TODO. &ndash;&gt;-->
-            <!--                    &lt;!&ndash;                &lt;!&ndash; I will add an ID to every iFrame so that I can add the links to the videos via JS code after accepting the cookie banner &ndash;&gt;&ndash;&gt;-->
-            <!--                    &lt;!&ndash;                <div class="iframe_container center_3">&ndash;&gt;-->
-            <!--                    &lt;!&ndash;                    <iframe id="portfolio_video_1" width="560" height="315" title="YouTube video player"&ndash;&gt;-->
-            <!--                    &lt;!&ndash;                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"&ndash;&gt;-->
-            <!--                    &lt;!&ndash;                    allowfullscreen>&ndash;&gt;-->
-            <!--                    &lt;!&ndash;                    </iframe>&ndash;&gt;-->
-            <!--                    &lt;!&ndash;                </div>&ndash;&gt;-->
-
-            <!--                <br>-->
-
-            <!--                <a href="https://foxwolf11.pythonanywhere.com/admin">-->
-            <!--                    Link to Gym's Back-end made in Django (Spanish only)-->
-            <!--                </a>-->
-            <!--                <br>-->
-            <!--                <br>-->
-
-            <!--                <p>-->
-            <!--                    This is the back-end made in Django for the Gym service that I made. Here, the administrator will be-->
-            <!--                    able to directly manipulate the database of my gym service.-->
-            <!--                </p>-->
-            <!--            </div>        &lt;!&ndash; End of Gym's Back-end made in Django &ndash;&gt;-->
-
-            <hr>
-
-            <div>   <!-- Reca Tahssil's website -->
-                <h2>Reca Tahssil:</h2>
-                <!-- <br> -->
-                <br>
-                    <!-- I need to create a YouTube video for Reca Tahssil. TODO. -->
-                    <!--                &lt;!&ndash; I will add an ID to every iFrame so that I can add the links to the videos via JS code after accepting the cookie banner &ndash;&gt;-->
-                    <!--                <div class="iframe_container center_3">-->
-                    <!--                    <iframe id="portfolio_video_1" width="560" height="315" title="YouTube video player"-->
-                    <!--                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-                    <!--                    allowfullscreen>-->
-                    <!--                    </iframe>-->
-                    <!--                </div>-->
-
-                <br>
-
-                <a href="https://recatahssil.eu.pythonanywhere.com/">Link to Reca Tahssil's website</a>
-                <br>
-                <br>
-
-                <p>This is the website for Reca Tahssil, a debt collecting company.</p>
-            </div>        <!-- End of Reca Tahssil's website. -->
-
-            <hr>
-
-            <div>   <!-- Wagtail Web App -->
-                <h2>Blog enhanced with ChatGPT:</h2>
-                <!-- <br> -->
-                <br>
-
-                <!-- I will add an ID to every iFrame so that I can add the links to the videos via JS code after accepting the cookie banner -->
-                <!--                <iframe width="560" height="315" src="https://www.youtube.com/embed/rYVvCBnYsQs?si=G2TMXEIB9J5sLMgz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-
-                <!--                                <iframe width="560" height="315"-->
-                <!--                                        src="https://www.youtube-nocookie.com/embed/rYVvCBnYsQs?si=G2TMXEIB9J5sLMgz&amp;controls=0"-->
-                <!--                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;-->
-                <!--                                        encrypted-media; gyroscope; picture-in-picture; web-share"-->
-                <!--                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>-->
-
-                <!--                                </iframe>-->
-
-
-                <div class="iframe_container center_3">
-                    <iframe id="portfolio_video_4" width="560" height="315" title="YouTube video player"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <br>
-
-                <a href="https://github.com/eduardoluis11/wagtail-art">Link to the Blog's repo</a>
-                <br>
-                <br>
-
-                <p> <!-- Description of Eduardo Fox's Gallery -->
-                    Here's the website of an AI art gallery. It's a blog made with Wagtail that uses a ChatGPT plugin.
-                </p>
-            </div>      <!-- End of the Wagtail web app. -->
-
-            <hr>
-
-            <div>   <!-- Keith's Javascript Game -->
-                <h2>Keith: a Web Game</h2>
-
-                <br>
-
-                <!-- I will add an ID to every iFrame so that I can add the links to the videos via JS code after accepting the cookie banner -->
-                    <div class="iframe_container center_3">
-                        <iframe id="portfolio_keith_video" width="560" height="315" title="YouTube video player"
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                        </iframe>
-
-                    </div>
-
-                <br>
-
-                <a href="https://github.com/eduardoluis11/keith-harvard">Link to the game's repo</a>
-                <br>
-                <br>
-
-                <p> <!-- Description for Keith -->
-                    This is “Keith”: a browser game made with JavaScript for its front-end, and Python for its back-end.
-                    Keith is a 2D action RPG in which you need to talk to your son to become stronger and have an
-                    easier time defeating enemies.
-                </p>
-            </div>      <!-- End of Keith's web app. -->
-
-            <hr>
-
-            <div>   <!-- Nova video Production's website -->
-                <h2>Nova Video Productions' Website:</h2>
-                <!-- <br> -->
-                <br>
-
-                <!-- I will add an ID to every iFrame so that I can add the links to the videos via JS code after accepting the cookie banner -->
-                <div class="iframe_container center_3">
-                    <iframe id="portfolio_video_1" width="560" height="315" title="YouTube video player"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                    </iframe>
-                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/UJHt2U5h5fs" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                    </iframe> -->
-                </div>
-
-                <br>
-
-                <a href="https://eduardoluis11.github.io/nova-video/">Link to Nova Video Production's website</a>
-                <br>
-                <br>
-
-                <p>This is the website for Nova Video Productions, a video editing company located in Wisconsin, USA. </p>
-            </div>      <!-- End of Nova Video Production's website. -->
-
-            <hr>
-
-        <!-- I will remove this website since it's too old -->
-        <!--            <h2>Wistarr List:</h2>-->
-        <!--            <br>-->
-
-        <!--            &lt;!&ndash; Wistarr List's video. &ndash;&gt;-->
-        <!--            &lt;!&ndash; This div will only center the video, not the text. &ndash;&gt;-->
-        <!--            &lt;!&ndash; I added a class called "iframe_container" which, alongside a class called "responsive-iframe",-->
-        <!--            it will adjust de iframe to fir the screen of every device.-->
-        <!--            Source: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp &ndash;&gt;-->
-        <!--            &lt;!&ndash; It works now by using the "iframe_container" and the "responsive-iframe" classes. I had to-->
-        <!--            insert the CSS code within the "style" tags on the "head" of this webpage.-->
-        <!--             The "center_3" class centers the videos on large screen sizes. &ndash;&gt;-->
-        <!--            <div  class="iframe_container center_3">-->
-        <!--                &lt;!&ndash; I used "vw" and "vh" tags to make the video responsive, and moved them to the stylesheet.css-->
-        <!--                file.-->
-        <!--            -->
-        <!--                I also added lazy loading to ALL iframes so that the portfolio page loads faster. &ndash;&gt;-->
-        <!--                <iframe id="portfolio_video_2" width="560" height="315" loading="lazy" title="YouTube video player" -->
-        <!--                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-        <!--                allowfullscreen>-->
-        <!--                </iframe>-->
-        <!--                -->
-        <!--                &lt;!&ndash; <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2ff_mKe0rmg" loading="lazy" -->
-        <!--                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
-        <!--                allowfullscreen></iframe> &ndash;&gt;-->
-        <!--            </div>-->
-
-
-        <!--            <br>-->
-        <!--            <br>-->
-
-
-        <!--            <br>-->
-        <!--            <br>-->
-
-        <!--            <p>This is a web app that lets you create a wishlist of the video games that you want to buy.</p>-->
-
-        <!-- I will remove this website since it's already too old -->
-        <!--            <h2>Starr:</h2>-->
-        <!--            <br>-->
-
-        <!--            &lt;!&ndash; Starr's video. &ndash;&gt;-->
-        <!--            <div class="iframe_container center_3">-->
-        <!--                <iframe id="portfolio_video_3" width="560" height="315" loading="lazy" title="YouTube video player" -->
-        <!--                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-        <!--                allowfullscreen>-->
-        <!--                </iframe>-->
-
-
-        <!--                &lt;!&ndash; <iframe class="responsive-iframe" src="https://www.youtube.com/embed/6bNyVyBNnqs" loading="lazy" -->
-        <!--                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
-        <!--                allowfullscreen></iframe> &ndash;&gt;-->
-        <!--            </div>-->
-
-
-        <!--            <br>-->
-        <!--            <br>-->
-        <!--            <a href="https://eduardoluis11.github.io/Starr-Speedruns/">Link to Starr's website</a>-->
-        <!--            <br>-->
-        <!--            <br>-->
-
-        <!--			<p>This is a prototype of a website where users can post videos of their own "speedruns."-->
-        <!--                <br>A speedrun is a sport in gaming which consists in finishing a video game as fast as possible.</p>-->
-
-
-
-
-        </div>
-
-    </div>
-
-
-    <!-- I inserted the footer within the body. -->
-    <footer class="container-fluid">
-        <!-- Website's footer. -->
-        <!-- I need to insert at least some text to make the footer to change color from the CSS code. -->
-        <!-- I need to make a 4x1 grid for the sitemap on the footer. -->
-        <div>
-            <!-- This div will act as a row and it will center the links of the sitemap. -->
-            <div class="row" style="text-align: center">
-                <div class="col-sm">
-                    <!-- The CSS code that makes the links remain white are on the CSS file. -->
-                    <a href="index.html"><p><b>Home</b></p></a>
-                    <a href="#"><p><b>Portfolio</b></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="about.html"><p><b>About us</b></p></a>
-                    <a href="privacy_n_legal.html"><p><b>Privacy and Legal</b></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="contact.html"><p><b>Contact Us</b></p></a>
-                </div>
-
-                <!-- Social media buttons. -->
-                <div class="col-sm">
-                    <p class="social-media-headline"><b>Follow Us On Our Social Media:</b></p>
-                    <div class="icon-padding-2"> <!-- This will add horizontal padding to all of the social media icons. -->
-                        <!-- Social media icons. -->
-                        <!-- Icons made by Pixel perfect from www.flaticon.com -->
-
-                        <!-- I will deactivate the Instagram and the Twitter accounts for the time being. -->
-                        <!--                        <a href="https://www.instagram.com/wistarr_official/" target="_blank">-->
-                        <!--                            <img src="img/instagram2.png" alt="Instagram icon." width="32px" height="32px">-->
-                        <!--                        </a>-->
-
-                        <!--                        <a href="https://twitter.com/WistarrOfficial" target="_blank">-->
-                        <!--                            <img src="img/twitter2.png" alt="Twitter icon." width="32px" height="32px">-->
-                        <!--                        </a>-->
-                        <a href="https://www.facebook.com/WistarrOfficial" target="_blank">
-                            <img src="img/facebook2.png" alt="Facebook icon." width="32px" height="32px">
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCJILUfxW5nKJDUCVaZIQquA" target="_blank">
-                            <img src="img/youtube2.png" alt="YouTube icon." width="32px" height="32px">
-                        </a>
-                    </div>
-
-                </div>
+      </div>
+    </header>
+
+    <!-- ====== Header End ====== -->
+
+    <!-- ====== Banner Start ====== -->
+    <section class="ud-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-banner-content">
+              <h1>Portfolio</h1>
             </div>
-        </div>          <!-- End of 4x1 grid. -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Banner End ====== -->
 
-        <!-- This will contain the copyright information in small text at the bottom of the footer. -->
-        <div id="copyright_1" class="text-center">
-            <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"
+    <!-- ====== Blog Start ====== -->
+    <section class="ud-blog-grids">
+      <div class="container">
+        <div class="row">
+
+          <!-- Police Tests's Photo and Links -->
+          <div class="col-lg-4 col-md-6">
+            <div class="ud-single-blog">
+              <div class="ud-blog-image">
+                <a href="police-tests-details.html">
+                  <img src="img/portfolio/police_tests/police-tests-small-thumbnail.png" alt="Police Tests' Web App" />
+                </a>
+              </div>
+              <div class="ud-blog-content">
+
+                <!-- Fix date later -->
+                <span class="ud-blog-date">2025</span>
+                <h3 class="ud-blog-title">
+                  <a href="police-tests-details.html">
+                    Police Tests
+                  </a>
+                </h3>
+                <p class="ud-blog-desc">
+                  <!--                  Click on the title or image to see more details, or-->
+                  <!--                  <a href="https://eduardopythonportfolio10.eu.pythonanywhere.com/">-->
+                  <!--                    click here to view the web app.-->
+                  <!--                  </a>-->
+                  A web app that allows you to take practice tests to prepare you for police entrance exams.
+
+                  <a href="police-tests-details.html">View project.</a>
+                </p>
+              </div>
+            </div>
+          </div>  <!-- End of Police Test's Web App's Thumbnail -->
+
+          <!-- Eduardo Fox's Art Gallery -->
+          <div class="col-lg-4 col-md-6">
+            <div class="ud-single-blog">
+              <div class="ud-blog-image">
+                <a href="eduardo-fox-art-details.html">
+                  <img src="img/portfolio/eduardo_fox_art/eduardo-fox-art-small-thumbnail.JPG" alt="Eduardo Fox's Art Gallery" />
+                </a>
+              </div>
+              <div class="ud-blog-content">
+                <span class="ud-blog-date">2024</span>
+                <h3 class="ud-blog-title">
+                  <a href="eduardo-fox-art-details.html">
+                    Eduardo Fox's Art Gallery
+                  </a>
+                </h3>
+                <p class="ud-blog-desc">
+                  <!--                  Click on the title or image to see more details, or-->
+                  <!--                  <a href="https://foxwolf20.eu.pythonanywhere.com/">-->
+                  <!--                    click here to view the web app.-->
+                  <!--                  </a>-->
+
+                  Here's the website of an AI art gallery. It's a blog made with Wagtail that uses a ChatGPT plugin.
+                  <a href="eduardo-fox-art-details.html">View project.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="ud-single-blog">
+              <div class="ud-blog-image">
+
+                <!-- Thumbnail Image of 370x247 px -->
+                <a href="keith-details.html">
+                  <img src="img/portfolio/keith_web/keith-web-small-thumbnail.png" alt="blog" />
+                  <!--                  <img src="assets/images/blog/blog-03.jpg" alt="blog" />-->
+                </a>
+              </div>
+              <div class="ud-blog-content">
+                <span class="ud-blog-date">2022</span>
+                <h3 class="ud-blog-title">
+                  <a href="keith-details.html">
+                    Keith Web
+                  </a>
+                </h3>
+                <p class="ud-blog-desc">
+                  This is “Keith”: a browser game made with JavaScript for its front-end, and Python for its back-end.
+                  <a href="keith-details.html">View project.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HR Web App -->
+          <div class="col-lg-4 col-md-6">
+            <div class="ud-single-blog">
+              <div class="ud-blog-image">
+                <a href="hr-management-details.html">
+                  <img src="img/portfolio/hr_management/hr-new-logo-small-thumbnail.png" alt="blog" />
+                  <!--                  <img src="img/portfolio/hr_management/hr-small-thumbnail.png" alt="blog" />-->
+                  <!--                  <img src="assets/images/blog/blog-02.jpg" alt="blog" />-->
+                </a>
+              </div>
+              <div class="ud-blog-content">
+                <span class="ud-blog-date">2022</span>
+                <h3 class="ud-blog-title">
+                  <a href="hr-management-details.html">
+                    HR Management Web App
+                  </a>
+                </h3>
+                <p class="ud-blog-desc">
+                  This web app is a human resources management system developed in Python by using Django.
+                  <a href="hr-management-details.html">View project.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="ud-single-blog">-->
+<!--              <div class="ud-blog-image">-->
+<!--                <a href="blog-details.html">-->
+<!--                  <img src="assets/images/blog/blog-03.jpg" alt="blog" />-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="ud-blog-content">-->
+<!--                <span class="ud-blog-date">Dec 22, 2023</span>-->
+<!--                <h3 class="ud-blog-title">-->
+<!--                  <a href="blog-details.html">-->
+<!--                    The no-fuss guide to upselling and cross selling-->
+<!--                  </a>-->
+<!--                </h3>-->
+<!--                <p class="ud-blog-desc">-->
+<!--                  Lorem Ipsum is simply dummy text of the printing and-->
+<!--                  typesetting industry.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="ud-single-blog">-->
+<!--              <div class="ud-blog-image">-->
+<!--                <a href="blog-details.html">-->
+<!--                  <img src="assets/images/blog/blog-01.jpg" alt="blog" />-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="ud-blog-content">-->
+<!--                <span class="ud-blog-date">Dec 22, 2023</span>-->
+<!--                <h3 class="ud-blog-title">-->
+<!--                  <a href="blog-details.html">-->
+<!--                    Meet AutoManage, the best AI management tools-->
+<!--                  </a>-->
+<!--                </h3>-->
+<!--                <p class="ud-blog-desc">-->
+<!--                  Lorem Ipsum is simply dummy text of the printing and-->
+<!--                  typesetting industry.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="ud-single-blog">-->
+<!--              <div class="ud-blog-image">-->
+<!--                <a href="blog-details.html">-->
+<!--                  <img src="assets/images/blog/blog-01.jpg" alt="blog" />-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="ud-blog-content">-->
+<!--                <span class="ud-blog-date">Dec 22, 2023</span>-->
+<!--                <h3 class="ud-blog-title">-->
+<!--                  <a href="blog-details.html">-->
+<!--                    Meet AutoManage, the best AI management tools-->
+<!--                  </a>-->
+<!--                </h3>-->
+<!--                <p class="ud-blog-desc">-->
+<!--                  Lorem Ipsum is simply dummy text of the printing and-->
+<!--                  typesetting industry.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="ud-single-blog">-->
+<!--              <div class="ud-blog-image">-->
+<!--                <a href="blog-details.html">-->
+<!--                  <img src="assets/images/blog/blog-02.jpg" alt="blog" />-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="ud-blog-content">-->
+<!--                <span class="ud-blog-date">Dec 22, 2023</span>-->
+<!--                <h3 class="ud-blog-title">-->
+<!--                  <a href="blog-details.html">-->
+<!--                    How to earn more money as a wellness coach-->
+<!--                  </a>-->
+<!--                </h3>-->
+<!--                <p class="ud-blog-desc">-->
+<!--                  Lorem Ipsum is simply dummy text of the printing and-->
+<!--                  typesetting industry.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="ud-single-blog">-->
+<!--              <div class="ud-blog-image">-->
+<!--                <a href="blog-details.html">-->
+<!--                  <img src="assets/images/blog/blog-03.jpg" alt="blog" />-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="ud-blog-content">-->
+<!--                <span class="ud-blog-date">Dec 22, 2023</span>-->
+<!--                <h3 class="ud-blog-title">-->
+<!--                  <a href="blog-details.html">-->
+<!--                    The no-fuss guide to upselling and cross selling-->
+<!--                  </a>-->
+<!--                </h3>-->
+<!--                <p class="ud-blog-desc">-->
+<!--                  Lorem Ipsum is simply dummy text of the printing and-->
+<!--                  typesetting industry.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+
+        </div>
+      </div>
+    </section>
+    <!-- ====== Blog End ====== -->
+
+    <!-- ====== Footer Start ====== -->
+    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+      <div class="shape shape-1">
+        <img src="assets/images/footer/shape-1.svg" alt="shape" />
+      </div>
+      <div class="shape shape-2">
+        <img src="assets/images/footer/shape-2.svg" alt="shape" />
+      </div>
+      <div class="shape shape-3">
+        <img src="assets/images/footer/shape-3.svg" alt="shape" />
+      </div>
+      <div class="ud-footer-widgets"> <!-- Footer -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="ud-widget">
+
+                <!-- This will load the white version of the logo on the footer -->
+                <a href="index.html" class="ud-footer-logo">
+                  <img src="img/white-company-logo.png" alt="logo" />
+                </a>
+                <p class="ud-widget-desc">  <!-- Slogan -->
+                  We achieve things.
+                  We do them well.
+                  Wistarr has you covered.
+                  <!--                  We create digital experiences for brands and companies by-->
+                  <!--                  using technology.-->
+                </p>
+                <ul class="ud-widget-socials">
+                  <li>  <!-- Link to Wistarr's Facebook page -->
+                    <a href="https://www.facebook.com/WistarrOfficial" rel="nofollow noopner" target="_blank">
+                      <i class="lni lni-facebook-filled"></i>
+                    </a>
+                  </li>
+                  <!--                  <li>-->
+                  <!--                    <a href="https://twitter.com/MusharofChy">-->
+                  <!--                      <i class="lni lni-twitter-filled"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="https://twitter.com/MusharofChy">-->
+                  <!--                      <i class="lni lni-instagram-filled"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="https://twitter.com/MusharofChy">-->
+                  <!--                      <i class="lni lni-linkedin-original"></i>-->
+                  <!--                    </a>-->
+                  <!--                  </li>-->
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">About Us</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <!--                  <li>-->
+                  <!--                    <a href="javascript:void(0)">Features</a>-->
+                  <!--                  </li>-->
+                  <!--                  <li>-->
+                  <!--                    <a href="javascript:void(0)">About</a>-->
+                  <!--                  </li>-->
+                  <li>
+                    <a href="privacy_n_legal.html">Privacy policy</a>
+                  </li>
+                  <li>
+                    <a href="privacy_n_legal.html">Terms of service</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ud-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <ul class="ud-footer-bottom-left">
+                <li>
+                  <a href="privacy_n_legal.html">Privacy policy</a>
+                </li>
+                <!--                <li>-->
+                <!--                  <a href="javascript:void(0)">Support policy</a>-->
+                <!--                </li>-->
+                <li>
+                  <a href="privacy_n_legal.html">Terms of service</a>
+                </li>
+                <li>
+
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+
+              <!-- Flaticon's Copyright information for the icons -->
+              <p class="ud-footer-bottom-right">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"
                 target="_blank"><u>Pixel perfect</u></a> from <a href="https://www.flaticon.com/" title="Flaticon"
-                target="_blank"><u> www.flaticon.com</u></a></p>
-            
-            <!-- This JS script will automatically update the year once a new year comes in (i.e: if it's 2021, it will update
-                to 2021.) 
-				Source: https://kerstinmartin.com/blog/copyright-notice -->
-            <p class="copyright-line">&#169 Copyright <script>document.write(new Date().getFullYear())</script> Wistarr. All rights reserved.</p>
-        </div>              <!-- End of footer -->
-
-        <!-- Cookie consent banner text. Some of the code was taken
-        from https://github.com/Godsont/Cookie-Consent-Banner/blob/master/index.html -->
-        <div class="cookie-container">
-            <p>
-                We use cookies to collect some information about people who use our website. You can read how we use cookies
-                in our <a href="privacy_n_legal.html" target="_blank"><u>Privacy Policy and our Terms and Conditions</u>
-            </a>. Click "I Accept" if you give us your permission to use our cookies to collect your information.
-            </p>
-
-            <button class="cookie-btn">
-                I Accept
-            </button>
-        </div>                      <!-- End of cookie consent banner text. -->
-
-        <!-- JS code from the "custom_js" folder. -->
-        <script src="custom_js/main.js"></script>
-
-        <!--  Boostrap JS. -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+                target="_blank"><u> www.flaticon.com</u></a>
+              </p>
+              <p class="ud-footer-bottom-right">
+                <!-- Copyright information and current year. -->
+                &#169 Copyright <script>document.write(new Date().getFullYear())</script> Wistarr. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+    <!-- ====== Footer End ====== -->
 
+    <!-- ====== Back To Top Start ====== -->
+    <a href="javascript:void(0)" class="back-to-top">
+      <i class="lni lni-chevron-up"> </i>
+    </a>
+    <!-- ====== Back To Top End ====== -->
+
+    <!-- ====== All Javascript Files ====== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
