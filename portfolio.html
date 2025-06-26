@@ -10,6 +10,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Wistarr">
+    <meta name="description" content="A web development company">
+    <meta name="keywords" content="Web Development, Web Developers, Website, Web App, Company, Wistarr">
+
+    <!-- This will make the website searchable in Google (by using the Google Search Console). -->
+	<meta name="google-site-verification" content="AaQTtLv_GWE6YXV5WReOwOsTUaPQsongekTm-Gdl6YM" />
+
+    <!-- Global site tag (gtag.custom_js) - Google Analytics.
+
+    This will only work if users click on "I accept" on the cookie consent banner.-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YRG54NPH3"></script>
+
     <title>Portfolio Overview | Wistarr</title>
 
     <!--====== Favicon Icon ======-->
@@ -24,6 +37,12 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/lineicons.css" />
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
+
+    <!-- === Custom CSS ====== -->
+    <!-- My own custom CSS
+
+    -->
+    <link rel="stylesheet" href="./custom_css/cookie-consent-banner-styles.css">
   </head>
   <body>
     <!-- ====== Header Start ======
@@ -34,7 +53,7 @@
     Inside "navbar-brand", I need to put the white Wistarr logo. This will load the logo while the navbar is
     transparent.
     -->
-        <header class="ud-header">
+    <header class="ud-header">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -507,7 +526,32 @@
     </a>
     <!-- ====== Back To Top End ====== -->
 
+    <!-- Cookie consent banner text. Some of the code was taken
+    from https://github.com/Godsont/Cookie-Consent-Banner/blob/master/index.html -->
+    <div class="cookie-container">
+        <p>
+            We use cookies to collect some information about people who use our website. You can read how we use cookies
+            in our <a href="privacy_n_legal.html" target="_blank"><u>Privacy Policy and our Terms and Conditions</u>
+        </a>. Click "I Accept" if you give us your permission to use our cookies to collect your information.
+        </p>
+
+        <button class="cookie-btn">
+            I Accept
+        </button>
+    </div>                      <!-- End of cookie consent banner text. -->
+
     <!-- ====== All Javascript Files ====== -->
+    <!-- JS scripts from my custom "custom_js" folder.
+
+    This will activate my cookie consent banner.
+
+    This will get the "src" attribute with the URL of the video for the iframe.
+
+    Additionally, it will activate Google Analytics if the user accepts my cookies.
+    -->
+    <script src="custom_js/google_analytics_tag_manager.js"></script>
+    <script src="custom_js/show_video_if_user_accepted_cookies.js"></script>
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
