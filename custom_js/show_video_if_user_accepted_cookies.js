@@ -19,7 +19,7 @@ if (localStorage.getItem("cookieBannerDisplayed")) {
             case "police_tests_video":  // If the iframe is for the Police Tests project
                 iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/lfv2mXHcS08?si=x-tpWevuH7An2Nn3");
                 break;
-            case "portfolio_video_1":
+            case "nova_productions_video":
                 iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/UJHt2U5h5fs");
                 break;
             case "eduardo_fox_art_video":   // If the iframe is for Eduardo Fox's Art project
